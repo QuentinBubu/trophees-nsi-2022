@@ -1,0 +1,93 @@
+{
+    "event1": {
+        "titre": "egalite",
+        "oui": {
+            "pop": 17654854,
+            "legalite": 50,
+            "temps": 4
+        },
+        "non": {
+            "pop": 5000000,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event2": {
+        "titre": "vacances",
+        "oui": {
+            "pop": 5000000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 4945945,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event3": {
+        "titre": "villa",
+        "oui": {
+            "pop": 5000000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 4845945,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event4": {
+        "titre": "detenus",
+        "oui": {
+            "pop": 5000000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 7400500,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event5": {
+        "titre": "avortement",
+        "oui": {
+            "pop": 5000000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 15748965,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event6": {
+        "titre": "victimes",
+        "oui": {
+            "pop": 13999000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 5000000,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event7": {
+        "titre": "reforme",
+        "oui": {
+            "pop": 2645713,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 5000000,
+            "legalite": 50,
+            "temps": 1
+        }
+    }
+}
