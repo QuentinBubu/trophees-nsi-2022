@@ -52,6 +52,10 @@ class Date:
         return Date.ANNEE_COURANT
 
     @staticmethod
+    def get_date() -> str:
+        return f"{Date.MOIS_COURANT}/{Date.ANNEE_COURANT}"
+
+    @staticmethod
     def __str__() -> str:
         return f"{Date.MOIS_COURANT}/{Date.ANNEE_COURANT}"
 
