@@ -6,6 +6,7 @@ class Legalite(Jauge):
 
     def __init__(self, legalite : float = 100) -> None:
         super().__init__()
+        self.legalite = 100
 
     def set_leg(self, v:int) -> int :
         """setter legalité
