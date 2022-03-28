@@ -8,7 +8,6 @@ class Justice(Jauge):
 
     def __init__(self, justice: float = 0) -> None:
         super().__init__()
-        self.justice = 0
 
     def set_jus(self, v:int) -> int :
         """setter justice
@@ -46,18 +45,18 @@ class Justice(Jauge):
     def chance_de_detection(self):
         """Fonction qui gère la propabilité d'être detécté par la justice
         NB : si la jauge justice est à 50%, cela ne veut pas dire que vous avez 1 chance / 2 d'être detécté(e), c'est un indiquateur qui plus il est élevé a de chance de vous envoyer en procès et d'aller en prison"""
-        just = self.get_jus()
+        just = Justice.get_jus()
         if just >= 50 :                             #si la jauge de détéction par la justice passe au dessus de 50% :
-            if randint((just*0.1),20)== 20 :        #le joueur à selon son pourcentage entre 1 chance sur 20 d'être détécté ou 1 chance sur 4.
+            if randint((just*0.1),10)== 10 :        #le joueur à selon son pourcentage entre 1 chance sur 10 d'être détécté ou 1 chance sur 2.
                 return Gestion.fin_jeu(2)           #fin du jeu
         if just < 50 :
-            self.add_jus(-1)
+            Justice.add_jus(-1)
 
     def lien_justice_legalite(self):
         """Cette fonction fait le lien entre la jauge de justice et de legalité
         plus on est dans l'illégalité, plus on a de chance d'être detécté par la justice et aller en prison"""
         legal = Legalite.get_leg()
         if legal < 50 :             
-            self.add_jus(randint(2, legal-48)//4)    #Si le joueur a un pourcentage de légalité inférieur à 50, à chaques tour la jauge "justice" augmente petit à petit
-        if legal > 50 :                              #Si le joueur a un pourcentage de légalité supérieur à 50, son pourcentage de chance d'être détécté par la justice est mis à 10
-            self.set_jus(10)
+            Justice.add_jus(randint(2, legal-48)//4)    #Si le joueur a un pourcentage de légalité inférieur à 50, à chaques tour la jauge "justice" augmente petit à petit
+        if legal > 50 :                             #Si le joueur a un pourcentage de légalité supérieur à 50, son pourcentage de chance d'être détécté par la justice est mis à 10
+            Justice.set_jus(10)
