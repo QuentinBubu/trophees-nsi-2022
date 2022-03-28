@@ -1,8 +1,11 @@
 from json import load
 from random import choice
+from src.utils.constante import MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from src.Gestion import Gestion
 
 class ListeEvenement:
 
+    dict_citoyen         = {}
     dict_maire           = {}
     dict_depute          = {}
     dict_depregion       = {}
@@ -10,7 +13,8 @@ class ListeEvenement:
     dict_president       = {}
     dict_presidentnation = {}
     
-    def __init__(self, grade, event):
+    def __init__(self, grade):
+        with open('src/utils/events/citoyen.json')         as f: self.dict_citoyen         = load(f)
         with open('src/utils/events/maire.json')           as f: self.dict_maire           = load(f)
         with open('src/utils/events/depute.json')          as f: self.dict_depute          = load(f)
         with open('src/utils/events/depRegion.json')       as f: self.dict_depregion       = load(f)
@@ -18,33 +22,53 @@ class ListeEvenement:
         with open('src/utils/events/president.json')       as f: self.dict_president       = load(f)
         with open('src/utils/events/presidentNation.json') as f: self.dict_presidentnation = load(f)
 
-        self.grade=grade
-        self.event=event
-        
-    def maire(self,event):
+        self.grade = grade
+
+    def citoyen(self):
+        event=choice(list(self.dict_citoyen.items()))
+        self.afficher(event)
+
+    def maire(self):
         event=choice(list(self.dict_maire.items()))
         self.afficher(event)
         
-    def depute(self,event):
+    def depute(self):
         event=choice(list(self.dict_depute.items()))
         self.afficher(event)
 
-    def depregion(self,event):
+    def depregion(self):
         event=choice(list(self.dict_depregion.items()))
         self.afficher(event)
 
-    def ministre(self,event):
+    def ministre(self):
         event=choice(list(self.dict_ministre.items()))
         self.afficher(event)
         
-    def president(self,event):
+    def president(self):
         event=choice(list(self.dict_president.items()))
         self.afficher(event)
         
-    def presidentnation(self,event):
+    def presidentnation(self):
         event=choice(list(self.dict_presidentnation.items()))
         self.afficher(event)
+
+    def faire_choix(self):
+        if self.grade == MAIRE:
+            self.maire()
+        elif self.grade == DEPUTE:
+            self.depute()
+        elif self.grade == DEPUTE_REGIONAL:
+            self.depregion()
+        elif self.grade == MINISTRE:
+            self.ministre()
+        elif self.grade == PRESIDENT:
+            self.president()
+        elif self.grade == PRESIDENT_DES_NATIONS:
+            self.presidentnation()
+        else:
+            Gestion.erreur("Grade: inconnu")
         
     def afficher(self,event):
-        print (event)
-        m=int(input(event[1]["titre"]))
+        print(event)
+        choix = input("Accepter?")
+        return choix
