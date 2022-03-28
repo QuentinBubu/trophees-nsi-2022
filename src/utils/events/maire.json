@@ -1,0 +1,93 @@
+{
+    "event1": {
+        "titre": "patrimoine",
+        "oui": {
+            "pop": 700,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 100,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event2": {
+        "titre": "papier",
+        "oui": {
+            "pop": 250,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 50,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event3": {
+        "titre": "salon",
+        "oui": {
+            "pop": 450,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 100,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event4": {
+        "titre": "poubelle",
+        "oui": {
+            "pop": 250,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 100,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event5": {
+        "titre": "degradation",
+        "oui": {
+            "pop": 500,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 50,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event6": {
+        "titre": "argent",
+        "oui": {
+            "pop": 400,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 300,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event7": {
+        "titre": "election",
+        "oui": {
+            "pop": 450,
+            "legalite": 50,
+            "temps": 4
+        },
+        "non": {
+            "pop": 50,
+            "legalite": 50,
+            "temps": 1
+        }
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "event1": {
+        "titre": "confiner",
+        "oui": {
+            "pop": 350500,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 671428,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event2": {
+        "titre": "plastique",
+        "oui": {
+            "pop": 350000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 671428,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event3": {
+        "titre": "musee",
+        "oui": {
+            "pop": 671428,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 450500,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event4": {
+        "titre": "travail",
+        "oui": {
+            "pop": 750000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 671428,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event5": {
+        "titre": "argent",
+        "oui": {
+            "pop": 671428,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 950700,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event6": {
+        "titre": "animaux",
+        "oui": {
+            "pop": 4700400,
+            "legalite": 50,
+            "temps": 4
+        },
+        "non": {
+            "pop": 671408,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event7": {
+        "titre": "jeune",
+        "oui": {
+            "pop": 450050,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 671428,
+            "legalite": 50,
+            "temps": 1
+        }
+    }
+}

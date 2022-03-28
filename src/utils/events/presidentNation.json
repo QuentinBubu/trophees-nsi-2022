@@ -1,0 +1,93 @@
+{
+    "event1": {
+        "titre": "marcial",
+        "oui": {
+            "pop": 3964285714,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 98555674,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event2": {
+        "titre": "invasion",
+        "oui": {
+            "pop": 2596846754,
+            "legalite": 50,
+            "temps": 4
+        },
+        "non": {
+            "pop": 3964285714,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event3": {
+        "titre": "autre",
+        "oui": {
+            "pop": 3964285714,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 44846754,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event4": {
+        "titre": "virus",
+        "oui": {
+            "pop": 3964285714,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 61942304,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event5": {
+        "titre": "survivant",
+        "oui": {
+            "pop": 3964285714,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 44850250,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event6": {
+        "titre": "espace",
+        "oui": {
+            "pop": 13467864,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 3964285714,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event7": {
+        "titre": "bombe",
+        "oui": {
+            "pop": 3964285714,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 3457864,
+            "legalite": 50,
+            "temps": 1
+        }
+    }
+}
