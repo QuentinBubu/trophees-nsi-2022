@@ -4,8 +4,12 @@ from src.utils.texts import T_FIN_GAGNE, T_FIN_PRISON, T_FIN_TEMPS
 
 class Gestion:
 
-    nom = ""
-    jauges = GestionJauges()
+    #nom = ""
+    #auges = GestionJauges()
+
+    def __init__(self): # c'est mieux que de faire des attributs propres à la classe ...
+        self.nom = ""
+        self.jauges = GestionJauges("jauge", "event")
 
     @staticmethod
     def erreur(erreur:str):
