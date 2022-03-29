@@ -16,3 +16,12 @@ class Temps:
     def verification(self) -> bool:
         if self.ajout == self.LIMITE:
             Gestion.fin_jeu(1)
+
+    def get_date(self) -> str:
+        return self.date_ig
+
+    def __str__(self) -> str:
+        return self.date_ig
+
+    def __repr__(self) -> str:
+        return self.date_ig

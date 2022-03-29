@@ -25,31 +25,38 @@ class ListeEvenement:
         self.grade = grade
 
     def citoyen(self):
-        event=choice(list(self.dict_citoyen.items()))
+        event = choice(list(self.dict_citoyen.items()))
+        del self.dict_citoyen[event]
         self.afficher(event)
 
     def maire(self):
-        event=choice(list(self.dict_maire.items()))
+        event = choice(list(self.dict_maire.items()))
+        del self.dict_maire[event]
         self.afficher(event)
         
     def depute(self):
-        event=choice(list(self.dict_depute.items()))
+        event = choice(list(self.dict_depute.items()))
+        del self.dict_depute[event]
         self.afficher(event)
 
     def depregion(self):
-        event=choice(list(self.dict_depregion.items()))
+        event = choice(list(self.dict_depregion.items()))
+        del self.depregion[event]
         self.afficher(event)
 
     def ministre(self):
-        event=choice(list(self.dict_ministre.items()))
+        event = choice(list(self.dict_ministre.items()))
+        del self.dict_ministre[event]
         self.afficher(event)
         
     def president(self):
-        event=choice(list(self.dict_president.items()))
+        event = choice(list(self.dict_president.items()))
+        del self.dict_president[event]
         self.afficher(event)
         
     def presidentnation(self):
-        event=choice(list(self.dict_presidentnation.items()))
+        event = choice(list(self.dict_presidentnation.items()))
+        del self.dict_presidentnation[event]
         self.afficher(event)
 
     def faire_choix(self):
@@ -71,4 +78,4 @@ class ListeEvenement:
     def afficher(self,event):
         print(event)
         choix = input("Accepter?")
-        return choix
+        return {'accepter':choix, 'event':event}
