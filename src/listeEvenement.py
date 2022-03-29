@@ -1,7 +1,7 @@
 from json import load
 from random import choice
 from src.utils.constante import MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
-from gestion import Gestion
+from src.utils.affichage import Affichage
 
 class ListeEvenement:
 
@@ -73,7 +73,7 @@ class ListeEvenement:
         elif self.grade == PRESIDENT_DES_NATIONS:
             self.presidentnation()
         else:
-            Gestion.erreur("Grade: inconnu")
+            Affichage.erreur('Grade inconnu')
         
     def afficher(self,event):
         print(event)

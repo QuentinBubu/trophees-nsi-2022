@@ -1,4 +1,4 @@
-from jauge import Jauge
+from src.jauge import Jauge
 
 #Legalite qui hérite de Jauge
 

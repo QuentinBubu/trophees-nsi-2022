@@ -1,13 +1,14 @@
 from src.listeEvenement import ListeEvenement
-from justice import Justice
-from popularite import Popularite
-from legalite import Legalite
-from temps import Temps
+from src.justice import Justice
+from src.popularite import Popularite
+from src.legalite import Legalite
+from src.temps import Temps
+from src.utils.constante import CITOYEN
 
 # à tester avec les variables correspondantes
 class GestionJauges:
 
-    liste_evenements = ListeEvenement()
+    liste_evenements = ListeEvenement(CITOYEN)
 
     def __init__(self):
         #recupération de la classe liste_evenement et jauges
@@ -24,7 +25,12 @@ class GestionJauges:
         """
 
         choix = self.liste_evenements.faire_choix()
-        self.popularite.add_jus(choix['event'][choix['accepter']]['pop'])
-        self.legalite.add_jus(choix['event'][choix['accepter']]['legalite'])
-        self.temps.add_jus(choix['event'][choix['accepter']]['temps'])
-        self.justice.lien_justice_legalite(self.legalite)
+        if not self.popularite.add_pop(choix['event'][choix['accepter']]['pop']):
+            return False
+        if not self.legalite.add_leg(choix['event'][choix['accepter']]['legalite']):
+            return False
+        if not self.temps.add_tps(choix['event'][choix['accepter']]['temps']):
+            return False
+        if not self.justice.lien_justice_legalite(self.legalite):
+            return False
+        return True

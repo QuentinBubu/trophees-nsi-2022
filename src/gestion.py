@@ -1,26 +1,10 @@
-from gestionJauges import GestionJauges
-from src.utils.constante import FIN_GAGNE, FIN_TEMPS, FIN_PRISON
-from src.utils.texts import T_FIN_GAGNE, T_FIN_PRISON, T_FIN_TEMPS
+from src.gestionJauges import GestionJauges
 
 class Gestion:
 
     nom = ""
     jauges = GestionJauges()
-
-    @staticmethod
-    def erreur(erreur:str):
-        print(erreur)
-
-    @staticmethod
-    def fin_jeu(fin):
-        if fin == FIN_GAGNE:
-            print(T_FIN_GAGNE)
-        elif fin == FIN_TEMPS:
-            print(T_FIN_TEMPS)
-        elif fin == FIN_PRISON:
-            print(T_FIN_PRISON)
-        else:
-            Gestion.erreur('Fin inconnu')
+    run = True
 
     def set_nom(self, nom:str) -> None:
         self.nom = nom
@@ -28,5 +12,12 @@ class Gestion:
     def get_nom(self) -> str:
         return self.nom
 
-    def appel_evenement(self):
-        pass
+    def appel_evenement(self) -> bool:
+        return self.jauges.jauges()
+
+    def lancement(self):
+        self.run = True
+        while self.run:
+            retour = self.appel_evenement()
+            if not retour:
+                self.run = False

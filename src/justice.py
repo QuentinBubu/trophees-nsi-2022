@@ -1,7 +1,7 @@
 from random import randint
-from jauge import Jauge
-from legalite import Legalite
-from gestion import Gestion
+from src.jauge import Jauge
+from src.legalite import Legalite
+from src.utils.affichage import Affichage
 
 #Justice hérite de Jauge
 
@@ -50,7 +50,8 @@ class Justice(Jauge):
         just = self.get_jus()
         if just >= 50 :                             #si la jauge de détéction par la justice passe au dessus de 50% :
             if randint((just*0.1),20)== 20 :        #le joueur à selon son pourcentage entre 1 chance sur 20 d'être détécté ou 1 chance sur 4.
-                return Gestion.fin_jeu(2)           #fin du jeu
+                Affichage.fin_jeu(2)
+                return False                        #fin du jeu
         if just < 50 :
             self.add_jus(-1)
 

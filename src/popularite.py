@@ -1,7 +1,7 @@
 from src.utils.constante import MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
-from jauge import Jauge
-from gestion import Gestion
-from listeEvenement import ListeEvenement
+from src.jauge import Jauge
+from src.listeEvenement import ListeEvenement
+from src.utils.affichage import Affichage
 
 #Popularité hérite de Jauge
 
@@ -58,4 +58,5 @@ class Popularite(Jauge):
             ListeEvenement.set_grade = PRESIDENT
         if pop >= 4000000000 :                                          #arrivé au grace maximal, président des nations, fin du jeu.
             ListeEvenement.set_grade = PRESIDENT_DES_NATIONS
-            return Gestion.fin_jeu(0)
+            Affichage.fin_jeu(0)
+            return False

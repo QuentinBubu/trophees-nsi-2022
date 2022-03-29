@@ -1,5 +1,5 @@
-from utils.Date import Date
-from gestion import Gestion
+from src.utils.Date import Date
+from src.utils.affichage import Affichage
 
 class Temps:
     LIMITE = 120
@@ -7,15 +7,16 @@ class Temps:
     date_ig = "00/00"
     ajout = 0
 
-    def avancement(self, ajouter:int) -> str:
+    def add_tps(self, ajouter:int) -> bool:
         self.ajout += ajouter
         self.date_ig = Date.ajouter_mois(self.ajout)
-        self.verification()
-        return self.date_ig
+        return False if not self.verification() else True
 
     def verification(self) -> bool:
         if self.ajout == self.LIMITE:
-            Gestion.fin_jeu(1)
+            Affichage.fin_jeu(1)
+            return False
+        return True
 
     def get_date(self) -> str:
         return self.date_ig
