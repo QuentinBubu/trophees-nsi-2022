@@ -1,4 +1,5 @@
-from src.ListeEvenement import ListeEvenement
+from src.listeEvenement import ListeEvenement
+from justice import justice
 # à tester avec les variables correspondantes
 class GestionJauges:
 
