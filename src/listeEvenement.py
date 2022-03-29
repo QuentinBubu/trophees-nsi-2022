@@ -1,6 +1,6 @@
 from json import load
 from random import choice
-from src.utils.constante import MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from src.utils.constante import CITOYEN, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.utils.affichage import Affichage
 
 class ListeEvenement:
@@ -26,56 +26,58 @@ class ListeEvenement:
 
     def citoyen(self):
         event = choice(list(self.dict_citoyen.items()))
-        del self.dict_citoyen[event]
-        self.afficher(event)
+        del self.dict_citoyen[event[0]]
+        return self.afficher(event)
 
     def maire(self):
         event = choice(list(self.dict_maire.items()))
         del self.dict_maire[event]
-        self.afficher(event)
+        return self.afficher(event)
         
     def depute(self):
         event = choice(list(self.dict_depute.items()))
         del self.dict_depute[event]
-        self.afficher(event)
+        return self.afficher(event)
 
     def depregion(self):
         event = choice(list(self.dict_depregion.items()))
         del self.depregion[event]
-        self.afficher(event)
+        return self.afficher(event)
 
     def ministre(self):
         event = choice(list(self.dict_ministre.items()))
         del self.dict_ministre[event]
-        self.afficher(event)
+        return self.afficher(event)
         
     def president(self):
         event = choice(list(self.dict_president.items()))
         del self.dict_president[event]
-        self.afficher(event)
+        return self.afficher(event)
         
     def presidentnation(self):
         event = choice(list(self.dict_presidentnation.items()))
         del self.dict_presidentnation[event]
-        self.afficher(event)
+        return self.afficher(event)
 
     def faire_choix(self):
-        if self.grade == MAIRE:
-            self.maire()
+        if self.grade == CITOYEN:
+            return self.citoyen()
+        elif self.grade == MAIRE:
+            return self.maire()
         elif self.grade == DEPUTE:
-            self.depute()
+            return self.depute()
         elif self.grade == DEPUTE_REGIONAL:
-            self.depregion()
+            return self.depregion()
         elif self.grade == MINISTRE:
-            self.ministre()
+            return self.ministre()
         elif self.grade == PRESIDENT:
-            self.president()
+            return self.president()
         elif self.grade == PRESIDENT_DES_NATIONS:
-            self.presidentnation()
+            return self.presidentnation()
         else:
             Affichage.erreur('Grade inconnu')
         
     def afficher(self,event):
         print(event)
         choix = input("Accepter?")
-        return {'accepter':choix, 'event':event}
+        return {'accepter':choix, 'event':event[1]}

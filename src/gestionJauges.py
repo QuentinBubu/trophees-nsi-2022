@@ -25,6 +25,7 @@ class GestionJauges:
         """
 
         choix = self.liste_evenements.faire_choix()
+        print(choix)
         if not self.popularite.add_pop(choix['event'][choix['accepter']]['pop']):
             return False
         if not self.legalite.add_leg(choix['event'][choix['accepter']]['legalite']):
