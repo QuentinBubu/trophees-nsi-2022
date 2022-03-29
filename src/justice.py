@@ -1,6 +1,7 @@
 from random import randint
-from jauge import *
-from legalite import *
+from jauge import Jauge
+from legalite import Legalite
+from gestion import Gestion
 
 #Justice hérite de Jauge
 

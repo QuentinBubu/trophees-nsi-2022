@@ -1,7 +1,7 @@
 from json import load
 from random import choice
 from src.utils.constante import MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
-from src.Gestion import Gestion
+from gestion import Gestion
 
 class ListeEvenement:
 

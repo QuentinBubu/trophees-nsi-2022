@@ -1,7 +1,7 @@
-from constante import *
-from jauge import *
-from gestion import *
-from listeEvenement import *
+from src.utils.constante import MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from jauge import Jauge
+from gestion import Gestion
+from listeEvenement import ListeEvenement
 
 #Popularité hérite de Jauge
 
