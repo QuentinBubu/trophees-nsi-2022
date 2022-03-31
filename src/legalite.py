@@ -20,11 +20,11 @@ class Legalite(Jauge):
         self.legalite = v
         return self.legalite
 
-    def get_leg(self):
+    def get_leg(self) -> int:
         """getter legalite"""
         return self.legalite
 
-    def add_leg(self, v):
+    def add_leg(self, v:int):
         """ajoute de la légalité
 
         Args:

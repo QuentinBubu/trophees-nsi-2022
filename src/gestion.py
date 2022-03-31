@@ -15,7 +15,7 @@ class Gestion:
     def appel_evenement(self) -> bool:
         return self.jauges.jauges()
 
-    def lancement(self):
+    def lancement(self) -> None:
         self.run = True
         while self.run:
             retour = self.appel_evenement()

@@ -8,3 +8,4 @@ PRESIDENT_DES_NATIONS = "président des nations"
 FIN_GAGNE = 0
 FIN_TEMPS = 1
 FIN_PRISON = 2
+FIN_DICT_VIDE = 3

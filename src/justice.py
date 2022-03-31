@@ -1,6 +1,5 @@
 from random import randint
 from src.jauge import Jauge
-from src.legalite import Legalite
 from src.utils.affichage import Affichage
 
 #Justice hérite de Jauge
@@ -23,7 +22,7 @@ class Justice(Jauge):
         self.justice = v
         return self.justice
 
-    def get_jus(self):
+    def get_jus(self) -> int:
         """getter justice"""
         return self.justice
 
@@ -55,11 +54,12 @@ class Justice(Jauge):
         if just < 50 :
             self.add_jus(-1)
 
-    def lien_justice_legalite(self):
+    def lien_justice_legalite(self, legalite:object) -> bool:
         """Cette fonction fait le lien entre la jauge de justice et de legalité
         plus on est dans l'illégalité, plus on a de chance d'être detécté par la justice et aller en prison"""
-        legal = Legalite.get_leg()
+        legal = legalite.get_leg()
         if legal < 50 :             
             self.add_jus(randint(2, legal-48)//4)    #Si le joueur a un pourcentage de légalité inférieur à 50, à chaques tour la jauge "justice" augmente petit à petit
         if legal > 50 :                              #Si le joueur a un pourcentage de légalité supérieur à 50, son pourcentage de chance d'être détécté par la justice est mis à 10
             self.set_jus(10)
+        return True

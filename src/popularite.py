@@ -1,6 +1,5 @@
 from src.utils.constante import MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.jauge import Jauge
-from src.listeEvenement import ListeEvenement
 from src.utils.affichage import Affichage
 
 #Popularité hérite de Jauge
@@ -39,24 +38,26 @@ class Popularite(Jauge):
         """        
         if type(v) == int :
             self.popularite = self.popularite + v
+        else:
+            return False
         if v + self.get_pop() < 0 :
             self.popularite = 0
-            return self.popularite
+        return True
 
-    def grade(self):
+    def grade(self, listeEvenement):
         """Gestion des grades"""
         pop = self.get_pop()
         if pop >= 20000 and pop < 300000:                              #minimum 20000 de popularité pour atteindre le grade maire.
-            ListeEvenement.set_grade = MAIRE
+            listeEvenement.set_grade(MAIRE)
         if pop >= 300000 and pop < 5000000 :
-            ListeEvenement.set_grade = DEPUTE
+            listeEvenement.set_grade(DEPUTE)
         if pop >= 5000000 and pop < 40000000 :
-            ListeEvenement.set_grade = DEPUTE_REGIONAL
+            listeEvenement.set_grade(DEPUTE_REGIONAL)
         if pop >= 40000000 and pop < 250000000 :
-            ListeEvenement.set_grade = MINISTRE
+            listeEvenement.set_grade(MINISTRE)
         if pop >= 250000000 and pop < 4000000000 :
-            ListeEvenement.set_grade = PRESIDENT
+            listeEvenement.set_grade(PRESIDENT)
         if pop >= 4000000000 :                                          #arrivé au grace maximal, président des nations, fin du jeu.
-            ListeEvenement.set_grade = PRESIDENT_DES_NATIONS
+            listeEvenement.set_grade(PRESIDENT_DES_NATIONS)
             Affichage.fin_jeu(0)
             return False
