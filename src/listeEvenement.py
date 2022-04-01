@@ -24,9 +24,11 @@ class ListeEvenement:
         with open('src/utils/events/ministre.json')        as f: self.dict_ministre        = load(f)
         with open('src/utils/events/president.json')       as f: self.dict_president       = load(f)
         with open('src/utils/events/presidentNation.json') as f: self.dict_presidentnation = load(f)
-
         self.grade = grade
-        
+
+    def get_grade(self) -> str:
+        return self.grade
+
     def set_grade(self, grade):
         self.grade = grade
 
