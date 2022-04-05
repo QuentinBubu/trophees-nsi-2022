@@ -23,7 +23,7 @@ def pourcentage(gauche:int, haut:int, element:pygame.Surface = None, nb_el:int =
         el_taille = element.get_size()
         return (
             (gauche * screen_taille[0]) + (el_taille[0] // 2) - nb_el // 2 * el_taille[0],
-            (haut * screen_taille[1]) + (el_taille[1] // 2) - nb_el // 2 * el_taille[1]
+            (haut * screen_taille[1]) + (el_taille[1] / 2) - nb_el / 2 * el_taille[1]
         )
 
 def afficher_text(text, position = (0.5, 0.5), screen = screen, font = font, antialias = True, color = BLANC, background = NOIR):
