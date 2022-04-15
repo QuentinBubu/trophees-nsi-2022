@@ -47,7 +47,8 @@ class Popularite(Jauge):
     def grade(self, listeEvenement):
         """Gestion des grades"""
         pop = self.get_pop()
-        if pop >= 20000 and pop < 300000:                              #minimum 20000 de popularité pour atteindre le grade maire.
+        if pop >= 20000 and pop < 300000:
+            print(listeEvenement.grade) #minimum 20000 de popularité pour atteindre le grade maire.
             listeEvenement.set_grade(MAIRE)
         if pop >= 300000 and pop < 5000000 :
             listeEvenement.set_grade(DEPUTE)

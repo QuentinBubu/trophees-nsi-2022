@@ -28,7 +28,7 @@
     "event3": {
         "titre": "proces",
         "oui": {
-            "pop": 3000,
+            "pop": 30000,
             "legalite": 50,
             "temps": 1
         },
@@ -54,7 +54,7 @@
     "event5": {
         "titre": "ecole",
         "oui": {
-            "pop": 7000,
+            "pop": 70000,
             "legalite": 50,
             "temps": 1
         },
@@ -67,12 +67,12 @@
     "event6": {
         "titre": "budjet",
         "oui": {
-            "pop": 4000,
+            "pop": 40000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 5000,
+            "pop": 50000,
             "legalite": 50,
             "temps": 1
         }

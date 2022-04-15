@@ -1,7 +1,6 @@
 from json import load
 from random import choice
 
-from urllib3 import Retry
 from src.utils.constante import CITOYEN, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.utils.affichage import Affichage
 
@@ -89,6 +88,7 @@ class ListeEvenement:
         return self.afficher(event)
 
     def faire_choix(self):
+        print(self.grade)
         if self.grade == CITOYEN:
             return self.citoyen()
         elif self.grade == MAIRE:
@@ -105,7 +105,7 @@ class ListeEvenement:
             return self.presidentnation()
         else:
             Affichage.erreur('Grade inconnu')
-        
+
     def afficher(self,event):
         print(event)
         choix = input("Accepter?")
