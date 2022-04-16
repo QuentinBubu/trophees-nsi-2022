@@ -55,7 +55,7 @@ class Bouton:
 
     def click(self):
         if self.function != None:
-            self.function()
+            return self.function()
 
     def draw(self, window: pygame.surface.Surface):
         if self.clicked:

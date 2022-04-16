@@ -10,7 +10,10 @@ ecran = PROLOGUE
 screen = Screen()
 
 interragibles = [
-    Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg")]
+    Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg"),
+    Bouton((240, 580), (120, 60), "image/oui.png", "image/oui_c.png"),
+    Bouton((890, 580), (120, 60), "image/non.png", "image/non_c.png")
+]
 
 while ouvert:
     screen.set_fond()
@@ -34,6 +37,8 @@ while ouvert:
                     for bouton in interragibles:
                         # Si le bouton est clické, alors sont état est clické
                         bouton.set_clicked(bouton.is_clicked())
+                        r = bouton.click()
+                    print(pygame.mouse.get_pos())
 
         # lacher le clic
         if event.type == pygame.MOUSEBUTTONUP:
