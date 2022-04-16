@@ -9,16 +9,18 @@ ouvert = True
 ecran = PROLOGUE
 screen = Screen()
 
-interragibles = [Bouton((50, 50), (50, 50), "image/temp_debut.jpg", "image/imagepygame.jpg")]
+interragibles = [
+    Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg")]
 
-while ouvert:    
+while ouvert:
     screen.set_fond()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             ouvert = False
         if event.type == pygame.VIDEORESIZE:
-            screen = pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE)
+            screen = pygame.display.set_mode(
+                (event.w, event.h), pygame.RESIZABLE)
 
         # click de souris
         if event.type == pygame.MOUSEBUTTONDOWN:
@@ -30,23 +32,26 @@ while ouvert:
                     ecran = MAIN
                 else:
                     for bouton in interragibles:
-                        bouton.set_clicked(bouton.is_clicked()) # Si le bouton est clické, alors sont état est clické
-        
+                        # Si le bouton est clické, alors sont état est clické
+                        bouton.set_clicked(bouton.is_clicked())
+
         # lacher le clic
         if event.type == pygame.MOUSEBUTTONUP:
             # clic gauche :
             if event.button == 1:
                 for bouton in interragibles:
-                    bouton.set_clicked(False) # Du fait que le bouton est laché, il ne peut pas y avoir de bouton clické
+                    # Du fait que le bouton est laché, il ne peut pas y avoir de bouton clické
+                    bouton.set_clicked(False)
 
     if ecran == MAIN:
         for i in interragibles:
             i.actualiser(screen)
     elif ecran == PROLOGUE:
-        afficher_text(T_PROLOGUE, screen, screen.font, (0.5,0.5), True, BLANC)
+        afficher_text(T_PROLOGUE, screen, screen.font, (0.5, 0.5), True, BLANC)
     elif ecran == CITOYEN:
         afficher_text(CITOYEN, screen, screen.font, (0.1, 0.2), True, BLANC)
-    afficher_text(CITOYEN.capitalize(), screen, screen.font50, (0.12, 0.055), True, BLANC)
+    afficher_text(CITOYEN.capitalize(), screen,
+                  screen.font50, (0.12, 0.055), True, BLANC)
 
     pygame.display.flip()
     screen.clock.tick(60)
@@ -55,4 +60,4 @@ while ouvert:
 pygame.quit()
 #g.set_nom(input('Bonjour, quel est ton nom? '))
 print(PROLOGUE)
-g.lancement()
+# g.lancement()

@@ -22,7 +22,9 @@ class Bouton:
         self.pos = pos
         self.size = size
         self.texture = pygame.image.load(texture_path)
+        self.texture = pygame.transform.scale(self.texture, self.size) 
         self.texture_clicked = pygame.image.load(texture_path_clicked)
+        self.texture_clicked = pygame.transform.scale(self.texture_clicked, self.size)
 
         self.function = func
 
@@ -35,10 +37,12 @@ class Bouton:
         self.pos = new_pos
 
     def set_texture(self, new_t):
-        self.texture = new_t
+        self.texture = pygame.image.load(new_t)
+        self.texture = pygame.transform.scale(self.texture, self.size) 
 
     def set_texture_clicked(self, new_tc):
-        self.texture_clicked = new_tc
+        self.texture_clicked = pygame.image.load(new_tc)
+        self.texture_clicked = pygame.transform.scale(self.texture_clicked, self.size)
 
     def set_clicked(self, state):
         self.clicked = state
