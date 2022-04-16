@@ -30,7 +30,7 @@ class Screen:
         return self.screen
 
     def blit(self, *args):
-        return self.screen.blit(*args)
+        return self.screen.blit(args)
 
     def get_size(self):
         return self.screen.get_size()
