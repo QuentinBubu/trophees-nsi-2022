@@ -35,4 +35,4 @@ def afficher_text(text, parent:pygame.Surface, font, position = (0.5, 0.5), anti
     position = pourcentage(position[0], position[1], parent, textes_traites[0], len(textes_traites))
     h_max = max([i.get_size() for i in textes_traites], key=lambda item:item[1])[1]
     for n, txt in enumerate(textes_traites):
-        parent.blit(txt, (position[0], position[1] + INTERLIGNE * n + h_max * n))
+        parent.screen.blit(txt, (position[0], position[1] + INTERLIGNE * n + h_max * n))

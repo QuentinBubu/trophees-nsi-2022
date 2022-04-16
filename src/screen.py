@@ -7,6 +7,7 @@ class Screen:
         pygame.init()
 
         self.screen = pygame.display.set_mode((1280, 720), pygame.RESIZABLE)
+        self.clock = pygame.time.Clock()
         self.set_caption('Head Of States')
         self.set_fond('image/imagepygame.jpg')
         self.clock = pygame.time.Clock()
@@ -27,7 +28,9 @@ class Screen:
         
     def get_screen(self):
         return self.screen
-    
-    def __getattribute__(self, __name: str):
-        if hasattr(self.screen, __name):
-            return getattr(self.screen, __name)()
+
+    def blit(self, *args):
+        return self.screen.blit(*args)
+
+    def get_size(self):
+        return self.screen.get_size()

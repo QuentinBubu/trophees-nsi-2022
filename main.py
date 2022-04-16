@@ -8,6 +8,7 @@ g = Gestion()
 ouvert = True
 ecran = PROLOGUE
 screen = Screen()
+
 while ouvert:    
     screen.set_fond()
 
@@ -26,7 +27,7 @@ while ouvert:
     afficher_text(CITOYEN.capitalize(), screen, screen.font50, (0.12, 0.055), True, BLANC)
 
     pygame.display.flip()
-    Screen.clock.tick(60)
+    screen.clock.tick(60)
 
 
 pygame.quit()
