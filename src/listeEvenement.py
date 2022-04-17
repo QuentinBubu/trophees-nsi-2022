@@ -1,5 +1,6 @@
 from json import load
 from random import choice
+from tkinter import Button
 from bouton import *
 from pygameSettings import PROLOGUE, afficher_text
 
@@ -16,6 +17,14 @@ class ListeEvenement:
     dict_ministre        = {}
     dict_president       = {}
     dict_presidentnation = {}
+    img_corr             = {
+        CITOYEN        : 'citoyen',
+        MAIRE          : 'maire',
+        DEPUTE         : 'depute',
+        DEPUTE_REGIONAL: 'depRegion',
+        MINISTRE       : 'ministre',
+        PRESIDENT      : 'president'
+    }
     
     def __init__(self, grade):
         with open('src/utils/events/citoyen.json')         as f: self.dict_citoyen         = load(f)
@@ -90,7 +99,7 @@ class ListeEvenement:
         return event
 
     def faire_choix(self, screen):
-        print(self.grade)
+        screen.set_fond(f"image/{self.img_corr[self.grade]}.jpg")
         if self.grade == CITOYEN:
             event = self.citoyen()
         elif self.grade == MAIRE:
@@ -144,7 +153,9 @@ class ListeEvenement:
                     # clic gauche :
                     if pyevent.button == 1:
                         for bouton in interragibles:
-                            choix, wait = bouton.click()
+                            if bouton.is_clicked():
+                                print(wait)
+                                choix, wait = bouton.click()
         print(choix)
         return {'accepter':choix, 'event':event[1]}
     

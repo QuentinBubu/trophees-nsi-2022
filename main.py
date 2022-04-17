@@ -9,7 +9,7 @@ ecran = PROLOGUE
 screen = Screen()
 
 interragibles = [
-    Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg")
+    #Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg")
 ]
 
 while ouvert:
