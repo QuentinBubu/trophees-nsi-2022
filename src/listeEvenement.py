@@ -97,7 +97,7 @@ class ListeEvenement:
         del self.dict_presidentnation[event[0]]
         return event
 
-    def faire_choix(self, screen):
+    def faire_choix(self, screen, date):
         screen.set_fond(f"image/{self.img_corr[self.grade]}.jpg")
         if self.grade == CITOYEN:
             event = self.citoyen()
@@ -115,9 +115,9 @@ class ListeEvenement:
             event = self.presidentnation()
         else:
             Affichage.erreur('Grade inconnu')
-        return self.afficher(event, screen)
+        return self.afficher(event, screen, date)
 
-    def afficher(self, event, screen):
+    def afficher(self, event, screen, date):
         interragibles = [
             Bouton((240, 580), (120, 60), "image/oui.png", "image/oui_c.png", self.retour_true),
             Bouton((890, 580), (120, 60), "image/non.png", "image/non_c.png", self.retour_false)
@@ -130,6 +130,7 @@ class ListeEvenement:
         screen.remove_on_screen(GRADE)
         afficher_text(self.grade.capitalize(), screen, screen.font50, GRADE, (0.12, 0.055))
         afficher_text(event[1]['titre'], screen, screen.font, EVENT)
+        afficher_text(date, screen, screen.font, 'DATE', (0.12, 0.17))
         wait = True
         while wait:
             for pyevent in pygame.event.get():
@@ -155,9 +156,8 @@ class ListeEvenement:
                             if bouton.is_clicked():
                                 print(wait)
                                 choix, wait = bouton.click()
-        print(choix)
         return {'accepter':choix, 'event':event[1]}
-    
+
     def retour_true(self):
         return 'oui', False
     def retour_false(self):

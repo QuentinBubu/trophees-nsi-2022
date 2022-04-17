@@ -43,6 +43,19 @@ class Date:
         return Date.MOIS_COURANT
 
     @staticmethod
+    def mois_ig_txt(mois:int) -> str:
+        """mois_ig_txt, calcule le mois dans le jeu puis le retourne sous forme de string
+
+        Args:
+            mois (int): nombre de mois à ajouter
+
+        Returns:
+            str: date sous la forme mm/YYYY
+        """        
+        date_ig = Date.ajouter_mois(mois)
+        return f"{Date.get_mois_txt(date_ig[0])} {date_ig[1]}"
+
+    @staticmethod
     def get_annee() -> int:
         """get annee, retourne l'année courante
 
@@ -54,6 +67,24 @@ class Date:
     @staticmethod
     def get_date() -> str:
         return f"{Date.MOIS_COURANT}/{Date.ANNEE_COURANT}"
+
+    @staticmethod
+    def get_mois_txt(mois:int) -> str:
+        corr = {
+            '1': 'Janvier',
+            '2': 'Févirer',
+            '3': 'Mars',
+            '4': 'Avril',
+            '5': 'Mai',
+            '6': 'Juin',
+            '7': 'Juillet',
+            '8': 'Août',
+            '9': 'Septembre',
+            '10': 'Octobre',
+            '11': 'Novembre',
+            '0': 'Décembre'
+        }
+        return corr[str(mois)]
 
     @staticmethod
     def __str__() -> str:

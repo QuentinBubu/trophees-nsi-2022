@@ -24,10 +24,9 @@ class GestionJauges:
         et temps avec les informations de la liste_evenement.
         """
 
-        choix = self.liste_evenements.faire_choix(screen)
+        choix = self.liste_evenements.faire_choix(screen, self.temps.get_date())
         if choix == False or choix['accepter'] == 'stop':
             return False
-        print(choix)
         if not self.popularite.add_pop(choix['event'][choix['accepter']]['pop']):
             return False
         if not self.legalite.add_leg(choix['event'][choix['accepter']]['legalite']):
