@@ -114,6 +114,9 @@ class ListeEvenement:
             Bouton((240, 580), (120, 60), "image/oui.png", "image/oui_c.png", self.retour_true),
             Bouton((890, 580), (120, 60), "image/non.png", "image/non_c.png", self.retour_false)
         ]
+        for i in interragibles:
+            i.actualiser(screen)
+            i.set_clicked(False)
         screen.remove_on_screen(PROLOGUE)
         screen.remove_on_screen(EVENT)
         screen.remove_on_screen(GRADE)
@@ -121,8 +124,6 @@ class ListeEvenement:
         afficher_text(event[1]['titre'], screen, screen.font, EVENT)
         wait = True
         while wait:
-            for i in interragibles:
-                i.actualiser(screen)
             for pyevent in pygame.event.get():
                 if pyevent.type == pygame.QUIT:
                     wait = False
@@ -144,9 +145,9 @@ class ListeEvenement:
                     # clic gauche :
                     if pyevent.button == 1:
                         for bouton in interragibles:
-                            # Du fait que le bouton est laché, il ne peut pas y avoir de bouton clické
-                            bouton.set_clicked(False)
                             choix, wait = bouton.click()
+                            
+        print(choix)
         return {'accepter':choix, 'event':event[1]}
     
     def retour_true(self):
