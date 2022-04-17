@@ -18,14 +18,14 @@ class GestionJauges:
         self.temps = Temps()  #temps.get_temps()
         self.justice = Justice()
         
-    def jauges(self) -> bool:
+    def jauges(self, screen) -> bool:
         """
         Cette fonction permet de gérer les jauges popularité, legalité
         et temps avec les informations de la liste_evenement.
         """
 
-        choix = self.liste_evenements.faire_choix()
-        if choix == False:
+        choix = self.liste_evenements.faire_choix(screen)
+        if choix == False or choix['accepter'] == 'stop':
             return False
         print(choix)
         if not self.popularite.add_pop(choix['event'][choix['accepter']]['pop']):

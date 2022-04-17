@@ -1,7 +1,9 @@
 from json import load
 from random import choice
+from bouton import *
+from pygameSettings import PROLOGUE, afficher_text
 
-from src.utils.constante import CITOYEN, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from src.utils.constante import BLANC, CITOYEN, EVENT, GRADE, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.utils.affichage import Affichage
 
 class ListeEvenement:
@@ -37,7 +39,7 @@ class ListeEvenement:
             return False
         event = choice(list(self.dict_citoyen.items()))
         del self.dict_citoyen[event[0]]
-        return self.afficher(event)
+        return event
 
     def maire(self):
         if len(self.dict_maire) == 0:
@@ -45,7 +47,7 @@ class ListeEvenement:
             return False
         event = choice(list(self.dict_maire.items()))
         del self.dict_maire[event[0]]
-        return self.afficher(event)
+        return event
         
     def depute(self):
         if len(self.dict_depute) == 0:
@@ -53,7 +55,7 @@ class ListeEvenement:
             return False
         event = choice(list(self.dict_depute.items()))
         del self.dict_depute[event[0]]
-        return self.afficher(event)
+        return event
 
     def depregion(self):
         if len(self.dict_depregion) == 0:
@@ -61,7 +63,7 @@ class ListeEvenement:
             return False
         event = choice(list(self.dict_depregion.items()))
         del self.depregion[event[0]]
-        return self.afficher(event)
+        return event
 
     def ministre(self):
         if len(self.dict_ministre) == 0:
@@ -69,7 +71,7 @@ class ListeEvenement:
             return False
         event = choice(list(self.dict_ministre.items()))
         del self.dict_ministre[event[0]]
-        return self.afficher(event)
+        return event
         
     def president(self):
         if len(self.dict_president) == 0:
@@ -77,7 +79,7 @@ class ListeEvenement:
             return False
         event = choice(list(self.dict_president.items()))
         del self.dict_president[event[0]]
-        return self.afficher(event)
+        return event
         
     def presidentnation(self):
         if len(self.dict_presidentnation) == 0:
@@ -85,28 +87,70 @@ class ListeEvenement:
             return False
         event = choice(list(self.dict_presidentnation.items()))
         del self.dict_presidentnation[event[0]]
-        return self.afficher(event)
+        return event
 
-    def faire_choix(self):
+    def faire_choix(self, screen):
         print(self.grade)
         if self.grade == CITOYEN:
-            return self.citoyen()
+            event = self.citoyen()
         elif self.grade == MAIRE:
-            return self.maire()
+            event = self.maire()
         elif self.grade == DEPUTE:
-            return self.depute()
+            event = self.depute()
         elif self.grade == DEPUTE_REGIONAL:
-            return self.depregion()
+            event = self.depregion()
         elif self.grade == MINISTRE:
-            return self.ministre()
+            event = self.ministre()
         elif self.grade == PRESIDENT:
-            return self.president()
+            event = self.president()
         elif self.grade == PRESIDENT_DES_NATIONS:
-            return self.presidentnation()
+            event = self.presidentnation()
         else:
             Affichage.erreur('Grade inconnu')
+        return self.afficher(event, screen)
 
-    def afficher(self,event):
-        print(event)
-        choix = input("Accepter?")
+    def afficher(self, event, screen):
+        interragibles = [
+            Bouton((240, 580), (120, 60), "image/oui.png", "image/oui_c.png", self.retour_true),
+            Bouton((890, 580), (120, 60), "image/non.png", "image/non_c.png", self.retour_false)
+        ]
+        for i in interragibles:
+            i.actualiser(screen)
+            i.set_clicked(False)
+        screen.remove_on_screen(PROLOGUE)
+        screen.remove_on_screen(EVENT)
+        screen.remove_on_screen(GRADE)
+        afficher_text(self.grade.capitalize(), screen, screen.font50, GRADE, (0.12, 0.055), True, BLANC)
+        afficher_text(event[1]['titre'], screen, screen.font, EVENT)
+        wait = True
+        while wait:
+            for pyevent in pygame.event.get():
+                if pyevent.type == pygame.QUIT:
+                    wait = False
+                    return False
+                if pyevent.type == pygame.VIDEORESIZE:
+                    screen.set_screen(pygame.display.set_mode((pyevent.w, pyevent.h), pygame.RESIZABLE))
+
+                # click de souris
+                if pyevent.type == pygame.MOUSEBUTTONDOWN:
+                    # click gauche :
+                    if pyevent.button == 1:
+                        for bouton in interragibles:
+                            # Si le bouton est clické, alors sont état est clické
+                            bouton.set_clicked(bouton.is_clicked())
+                            r = bouton.click()
+
+                # lacher le clic
+                if pyevent.type == pygame.MOUSEBUTTONUP:
+                    # clic gauche :
+                    if pyevent.button == 1:
+                        for bouton in interragibles:
+                            choix, wait = bouton.click()
+                            
+        print(choix)
         return {'accepter':choix, 'event':event[1]}
+    
+    def retour_true(self):
+        return 'oui', False
+    def retour_false(self):
+        return 'non', False
