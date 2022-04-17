@@ -48,9 +48,9 @@ while ouvert:
         for i in interragibles:
             i.actualiser(screen)
     elif ecran == PROLOGUE:
-        afficher_text(T_PROLOGUE, screen, screen.font, (0.5, 0.5), True, BLANC)
+        afficher_text(T_PROLOGUE, screen, screen.font, PROLOGUE, (0.5, 0.5), True, BLANC)
     elif ecran == CITOYEN:
-        afficher_text(CITOYEN.capitalize(), screen, screen.font50, (0.12, 0.055), True, BLANC)
+        afficher_text(CITOYEN.capitalize(), screen, screen.font50, CITOYEN, (0.12, 0.055), True, BLANC)
 
     pygame.display.flip()
     screen.clock.tick(60)

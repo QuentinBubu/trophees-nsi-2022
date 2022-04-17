@@ -39,7 +39,7 @@ def afficher_text(text, parent:pygame.Surface, font, position = (0.5, 0.5), anti
 """
 
 
-def afficher_text(text, screen, font, position = (0.5, 0.5), antialias = True, color = BLANC, background = None, alpha = 255):
+def afficher_text(text, screen, font, nom, position = (0.5, 0.5), antialias = True, color = BLANC, background = None, alpha = 255):
     txt_sprite = pygame.sprite.Group()
     textes = text.split('\n')
     textes_traites = []
@@ -52,6 +52,8 @@ def afficher_text(text, screen, font, position = (0.5, 0.5), antialias = True, c
         txt.rect.y = position[1] + INTERLIGNE * n + h_max * n
         txt_sprite.add(txt)
     screen.add_sprite(txt_sprite)
+    screen.add_on_screen(nom, txt_sprite)
+    return txt_sprite
     
 class Text(pygame.sprite.Sprite):
     def __init__(self, txt, font, antialias, color, background):

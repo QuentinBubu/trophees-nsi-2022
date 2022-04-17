@@ -3,6 +3,7 @@ import pygame
 class Screen:
     
     sprites = pygame.sprite.Group()
+    on_screen = {}
 
     def __init__(self) -> None:
         pygame.init()
@@ -44,8 +45,22 @@ class Screen:
     
     def add_sprite(self, sprite):
         self.sprites.add(sprite)
-        self.sprites.update()
-        self.sprites.draw(self.screen)
+        self.update()
         
     def remove_sprite(self, sprite):
+        self.sprites.empty()
         self.sprites.remove(sprite)
+        self.update()
+        
+    def add_on_screen(self, nom, element):
+        self.on_screen[nom] = element
+        
+    def remove_on_screen(self, nom):
+        if nom in list(self.on_screen.keys()):
+            self.remove_sprite(self.on_screen[nom])
+            del self.on_screen[nom]
+
+    def update(self):
+        self.sprites.update()
+        self.sprites.draw(self.screen)
+        pygame.display.flip()

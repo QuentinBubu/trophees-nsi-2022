@@ -1,9 +1,9 @@
 from json import load
 from random import choice
 from bouton import *
-from pygameSettings import afficher_text
+from pygameSettings import PROLOGUE, afficher_text
 
-from src.utils.constante import CITOYEN, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from src.utils.constante import BLANC, CITOYEN, EVENT, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.utils.affichage import Affichage
 
 class ListeEvenement:
@@ -116,36 +116,40 @@ class ListeEvenement:
             Bouton((240, 580), (120, 60), "image/oui.png", "image/oui_c.png", self.retour_true),
             Bouton((890, 580), (120, 60), "image/non.png", "image/non_c.png", self.retour_false)
         ]
-        afficher_text(event[1]['titre'], screen, screen.font)
+        screen.remove_on_screen(PROLOGUE)
+        afficher_text(self.grade.capitalize(), screen, screen.font50, CITOYEN, (0.12, 0.055), True, BLANC)
+        afficher_text(event[1]['titre'], screen, screen.font, EVENT)
         wait = True
         while wait:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    choix = 'stop'
-                if event.type == pygame.VIDEORESIZE:
-                    screen.set_screen(pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE))
+            for pyevent in pygame.event.get():
+                if pyevent.type == pygame.QUIT:
+                    wait = False
+                    return False
+                if pyevent.type == pygame.VIDEORESIZE:
+                    screen.set_screen(pygame.display.set_mode((pyevent.w, pyevent.h), pygame.RESIZABLE))
 
                 # click de souris
-                if event.type == pygame.MOUSEBUTTONDOWN:
+                if pyevent.type == pygame.MOUSEBUTTONDOWN:
                     # click gauche :
-                    if event.button == 1:
+                    if pyevent.button == 1:
                         for bouton in interragibles:
                             # Si le bouton est clické, alors sont état est clické
                             bouton.set_clicked(bouton.is_clicked())
                             r = bouton.click()
 
                 # lacher le clic
-                if event.type == pygame.MOUSEBUTTONUP:
+                if pyevent.type == pygame.MOUSEBUTTONUP:
                     # clic gauche :
-                    if event.button == 1:
+                    if pyevent.button == 1:
                         for bouton in interragibles:
                             # Du fait que le bouton est laché, il ne peut pas y avoir de bouton clické
                             bouton.set_clicked(False)
                             choix = bouton.click()
+                            wait = False
         print(choix)
         return {'accepter':choix, 'event':event[1]}
     
     def retour_true(self):
-        return True
+        return 'oui'
     def retour_false(self):
-        return False
+        return 'non'
