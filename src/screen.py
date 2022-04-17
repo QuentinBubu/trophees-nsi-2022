@@ -13,7 +13,7 @@ class Screen:
         self.set_caption('Head Of States')
         self.set_fond('image/temp_debut.jpg')
         self.clock = pygame.time.Clock()
-
+        self.set_logo('image/logo.png')
         self.font = pygame.font.SysFont('Candara', 30)
         self.font50 = pygame.font.SysFont('Candara', 50)
 
@@ -25,9 +25,15 @@ class Screen:
         if chemin != '':
             self.chemin = chemin
         self.fond = pygame.image.load(self.chemin).convert_alpha()
-        self.fond = pygame.transform.rotate(self.fond, -90)
+        if self.fond.get_width() < self.fond.get_height():
+            self.fond = pygame.transform.rotate(self.fond, -90)
         self.fond = pygame.transform.scale(self.fond, self.screen.get_size())
         self.screen.blit(self.fond, (0,0))
+        
+    def set_logo(self, chemin:str = ''):
+        self.logo = pygame.image.load(chemin).convert_alpha()
+        pygame.display.set_icon(self.logo)
+        
 
     def get_screen(self):
         return self.screen

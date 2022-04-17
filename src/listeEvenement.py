@@ -1,10 +1,9 @@
 from json import load
 from random import choice
-from tkinter import Button
 from bouton import *
 from pygameSettings import PROLOGUE, afficher_text
 
-from src.utils.constante import BLANC, CITOYEN, EVENT, GRADE, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from src.utils.constante import CITOYEN, EVENT, GRADE, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.utils.affichage import Affichage
 
 class ListeEvenement:

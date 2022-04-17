@@ -7,13 +7,20 @@ g = Gestion()
 ouvert = True
 ecran = PROLOGUE
 screen = Screen()
+import time
 
 interragibles = [
     #Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg")
 ]
-
+once = True
 while ouvert:
-    screen.set_fond()
+    
+    if once:
+        once = False
+        screen.set_fond('image/logo.png')
+        pygame.display.flip()
+        time.sleep(3)
+    screen.set_fond('image/temp_debut.jpg')
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
