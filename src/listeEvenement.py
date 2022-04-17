@@ -3,7 +3,7 @@ from random import choice
 from bouton import *
 from pygameSettings import PROLOGUE, afficher_text
 
-from src.utils.constante import CITOYEN, EVENT, GRADE, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from src.utils.constante import CITOYEN, EVENT, GRADE, DATE, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.utils.affichage import Affichage
 
 class ListeEvenement:
@@ -114,7 +114,8 @@ class ListeEvenement:
         elif self.grade == PRESIDENT_DES_NATIONS:
             event = self.presidentnation()
         else:
-            Affichage.erreur('Grade inconnu')
+            screen.error('Grade inconnu')
+            return False
         return self.afficher(event, screen, date)
 
     def afficher(self, event, screen, date):
@@ -130,7 +131,7 @@ class ListeEvenement:
         screen.remove_on_screen(GRADE)
         afficher_text(self.grade.capitalize(), screen, screen.font50, GRADE, (0.12, 0.055))
         afficher_text(event[1]['titre'], screen, screen.font, EVENT)
-        afficher_text(date, screen, screen.font, 'DATE', (0.12, 0.17))
+        afficher_text(date, screen, screen.font, DATE, (0.12, 0.17))
         wait = True
         while wait:
             for pyevent in pygame.event.get():

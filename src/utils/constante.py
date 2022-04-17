@@ -7,6 +7,7 @@ PRESIDENT = "président"
 PRESIDENT_DES_NATIONS = "président des nations"
 EVENT = "event"
 GRADE = "grade"
+DATE = "date"
 FIN_GAGNE = 0
 FIN_TEMPS = 1
 FIN_PRISON = 2

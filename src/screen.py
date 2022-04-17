@@ -1,5 +1,7 @@
 import pygame
 
+from pygameSettings import afficher_text
+
 class Screen:
     
     sprites = pygame.sprite.Group()
@@ -77,3 +79,20 @@ class Screen:
         self.sprites.update()
         self.sprites.draw(self.screen)
         pygame.display.flip()
+        
+    def error(self, text:str):
+        for sprite in self.get_all_sprites():
+            self.remove_sprite(sprite)
+        self.screen.fill((255,0,0))
+        afficher_text("ERREUR\n" + text + "\nPRESSEZ UNE TOUCHE", self, self.font50, 'ERROR')
+        pygame.display.flip()
+        stop = False
+        while not stop:
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    stop = True
+                if event.type == pygame.QUIT:
+                    stop = True
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    stop = True
+        return False
