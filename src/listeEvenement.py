@@ -120,7 +120,7 @@ class ListeEvenement:
         screen.remove_on_screen(PROLOGUE)
         screen.remove_on_screen(EVENT)
         screen.remove_on_screen(GRADE)
-        afficher_text(self.grade.capitalize(), screen, screen.font50, GRADE, (0.12, 0.055), True, BLANC)
+        afficher_text(self.grade.capitalize(), screen, screen.font50, GRADE, (0.12, 0.055))
         afficher_text(event[1]['titre'], screen, screen.font, EVENT)
         wait = True
         while wait:
@@ -138,7 +138,6 @@ class ListeEvenement:
                         for bouton in interragibles:
                             # Si le bouton est clické, alors sont état est clické
                             bouton.set_clicked(bouton.is_clicked())
-                            r = bouton.click()
 
                 # lacher le clic
                 if pyevent.type == pygame.MOUSEBUTTONUP:
@@ -146,7 +145,6 @@ class ListeEvenement:
                     if pyevent.button == 1:
                         for bouton in interragibles:
                             choix, wait = bouton.click()
-                            
         print(choix)
         return {'accepter':choix, 'event':event[1]}
     

@@ -2,7 +2,6 @@ from src.screen import Screen
 from src.gestion import Gestion
 from src.utils.texts import T_PROLOGUE
 from pygameSettings import *
-from src.utils.constante import CITOYEN
 from bouton import *
 g = Gestion()
 ouvert = True
@@ -10,9 +9,7 @@ ecran = PROLOGUE
 screen = Screen()
 
 interragibles = [
-    Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg"),
-    Bouton((240, 580), (120, 60), "image/oui.png", "image/oui_c.png"),
-    Bouton((890, 580), (120, 60), "image/non.png", "image/non_c.png")
+    Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg")
 ]
 
 while ouvert:
@@ -38,8 +35,7 @@ while ouvert:
             # clic gauche :
             if event.button == 1:
                 if ecran == PROLOGUE:
-                    ecran = CITOYEN
-                    g.lancement(screen)
+                    ecran = MAIN
                 for bouton in interragibles:
                     # Du fait que le bouton est laché, il ne peut pas y avoir de bouton clické
                     bouton.set_clicked(False)
@@ -49,8 +45,9 @@ while ouvert:
             i.actualiser(screen)
     elif ecran == PROLOGUE:
         afficher_text(T_PROLOGUE, screen, screen.font, PROLOGUE, (0.5, 0.5), True, BLANC)
-    elif ecran == CITOYEN:
-        afficher_text(CITOYEN.capitalize(), screen, screen.font50, CITOYEN, (0.12, 0.055), True, BLANC)
+    if ecran != PROLOGUE:
+        if g.lancement(screen) == False:
+            ouvert = False
 
     pygame.display.flip()
     screen.clock.tick(60)

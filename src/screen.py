@@ -48,8 +48,14 @@ class Screen:
         self.update()
         
     def remove_sprite(self, sprite):
-        self.sprites.empty()
+        t = pygame.sprite.Group()
+        if type(sprite) == type(t):
+            for el in sprite:
+                el.kill()
+        else:
+            sprite.kill()
         self.sprites.remove(sprite)
+        self.sprites.empty()
         self.update()
         
     def add_on_screen(self, nom, element):
