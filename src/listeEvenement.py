@@ -3,7 +3,7 @@ from random import choice
 from bouton import *
 from pygameSettings import PROLOGUE, afficher_text
 
-from src.utils.constante import BLANC, CITOYEN, EVENT, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from src.utils.constante import BLANC, CITOYEN, EVENT, GRADE, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.utils.affichage import Affichage
 
 class ListeEvenement:
@@ -110,17 +110,19 @@ class ListeEvenement:
         return self.afficher(event, screen)
 
     def afficher(self, event, screen):
-        print(event)
         interragibles = [
-            Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg"),
             Bouton((240, 580), (120, 60), "image/oui.png", "image/oui_c.png", self.retour_true),
             Bouton((890, 580), (120, 60), "image/non.png", "image/non_c.png", self.retour_false)
         ]
         screen.remove_on_screen(PROLOGUE)
-        afficher_text(self.grade.capitalize(), screen, screen.font50, CITOYEN, (0.12, 0.055), True, BLANC)
+        screen.remove_on_screen(EVENT)
+        screen.remove_on_screen(GRADE)
+        afficher_text(self.grade.capitalize(), screen, screen.font50, GRADE, (0.12, 0.055), True, BLANC)
         afficher_text(event[1]['titre'], screen, screen.font, EVENT)
         wait = True
         while wait:
+            for i in interragibles:
+                i.actualiser(screen)
             for pyevent in pygame.event.get():
                 if pyevent.type == pygame.QUIT:
                     wait = False
@@ -144,12 +146,10 @@ class ListeEvenement:
                         for bouton in interragibles:
                             # Du fait que le bouton est laché, il ne peut pas y avoir de bouton clické
                             bouton.set_clicked(False)
-                            choix = bouton.click()
-                            wait = False
-        print(choix)
+                            choix, wait = bouton.click()
         return {'accepter':choix, 'event':event[1]}
     
     def retour_true(self):
-        return 'oui'
+        return 'oui', False
     def retour_false(self):
-        return 'non'
+        return 'non', False
