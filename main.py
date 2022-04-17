@@ -19,7 +19,7 @@ while ouvert:
         once = False
         screen.set_fond('image/logo.png')
         pygame.display.flip()
-        time.sleep(0)
+        time.sleep(3)
     screen.set_fond('image/temp_debut.jpg')
 
     for event in pygame.event.get():
