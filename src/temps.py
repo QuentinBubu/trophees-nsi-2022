@@ -16,7 +16,7 @@ class Temps:
         return False if not self.verification() else True
 
     def verification(self) -> bool:
-        if self.ajout == self.LIMITE:
+        if self.ajout >= self.LIMITE:
             Affichage.fin_jeu(1)
             return False
         return True
