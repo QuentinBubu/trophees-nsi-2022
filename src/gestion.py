@@ -35,8 +35,8 @@ class Gestion:
     def get_event(self) -> None:
         return self.liste_evenements.faire_choix(self.grade)
     
-    def set_event(self, choix, event) -> None:
-        self.jauges.jauges(choix, event, self)
+    def set_event(self, choix, event):
+        return self.jauges.jauges(choix, event, self)
 
     def set_attente_reponse(self, reponse:bool):
         self.attente_reponse = reponse

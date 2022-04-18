@@ -5,7 +5,7 @@ class Temps:
     actuel = Date.get_date()
     date_ig = "00/00"
     ajout = 0
-    
+
     def __init__(self) -> None:
         self.add_tps(0)
 

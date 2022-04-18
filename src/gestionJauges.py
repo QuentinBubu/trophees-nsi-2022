@@ -2,7 +2,7 @@ from src.justice import Justice
 from src.popularite import Popularite
 from src.legalite import Legalite
 from src.temps import Temps
-from src.utils.constante import FIN_DICT_VIDE, FIN_PRISON, FIN_TEMPS
+from src.utils.constante import FIN_DICT_VIDE, FIN_PRISON, FIN_TEMPS, CONTINUE
 
 # à tester avec les variables correspondantes
 class GestionJauges:
@@ -29,4 +29,4 @@ class GestionJauges:
         if not self.justice.lien_justice_legalite(self.legalite):
             return False, FIN_PRISON
         self.popularite.grade(gestion) # ATTENTION: VERIFICATION VICTOIRE
-        return True
+        return True, CONTINUE
