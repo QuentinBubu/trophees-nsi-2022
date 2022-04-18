@@ -3,7 +3,11 @@ import pygame
 from pygameSettings import afficher_text
 
 class Screen:
-    
+
+    WAITING = 'waiting'
+    PROLOGUE = 'prologue'
+    MAIN = 'main'
+
     sprites = pygame.sprite.Group()
     on_screen = {}
 

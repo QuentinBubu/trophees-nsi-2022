@@ -1,3 +1,4 @@
+from time import sleep
 from src.screen import Screen
 from src.gestion import Gestion
 from src.utils.texts import T_PROLOGUE
@@ -5,13 +6,10 @@ from pygameSettings import *
 from bouton import *
 g = Gestion()
 ouvert = True
-ecran = PROLOGUE
 screen = Screen()
-import time
+ecran = screen.WAITING
 
-interragibles = [
-    #Bouton((50, 50), (100, 100), "image/temp_debut.jpg", "image/imagepygame.jpg")
-]
+interragibles = []
 once = True
 while ouvert:
     
@@ -19,7 +17,7 @@ while ouvert:
         once = False
         screen.set_fond('image/logo.png')
         pygame.display.flip()
-        time.sleep(2)
+        sleep(2)
     screen.set_fond('image/temp_debut.jpg')
 
     for event in pygame.event.get():
@@ -41,18 +39,18 @@ while ouvert:
         if event.type == pygame.MOUSEBUTTONUP:
             # clic gauche :
             if event.button == 1:
-                if ecran == PROLOGUE:
-                    ecran = MAIN
+                if ecran == screen.PROLOGUE:
+                    ecran = screen.MAIN
                 for bouton in interragibles:
                     # Du fait que le bouton est laché, il ne peut pas y avoir de bouton clické
                     bouton.set_clicked(False)
 
-    if ecran == MAIN:
+    if ecran == screen.MAIN:
         for i in interragibles:
             i.actualiser(screen)
-    elif ecran == PROLOGUE:
-        afficher_text(T_PROLOGUE, screen, screen.font, PROLOGUE, (0.5, 0.5), True, BLANC)
-    if ecran != PROLOGUE:
+    elif ecran == screen.PROLOGUE:
+        afficher_text(T_PROLOGUE, screen, screen.font, screen.PROLOGUE, (0.5, 0.5), True, BLANC)
+    if ecran != screen.PROLOGUE:
         if g.lancement(screen) == False:
             ouvert = False
 
@@ -61,5 +59,3 @@ while ouvert:
 
 
 pygame.quit()
-#g.set_nom(input('Bonjour, quel est ton nom? '))
-# g.lancement()
