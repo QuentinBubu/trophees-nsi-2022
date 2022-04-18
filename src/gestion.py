@@ -28,7 +28,7 @@ class Gestion:
     
     def set_grade(self, grade):
         self.grade = grade
-        
+
     def get_grade(self) -> str:
         return self.grade
 

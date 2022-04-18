@@ -2,7 +2,7 @@ from json import load
 from random import choice
 from bouton import *
 
-from src.utils.constante import CITOYEN, EVENT, GRADE, DATE, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from src.utils.constante import CITOYEN, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.utils.affichage import Affichage
 
 class ListeEvenement:
@@ -33,56 +33,49 @@ class ListeEvenement:
 
     def citoyen(self):
         if len(self.dict_citoyen) == 0:
-            Affichage.fin_jeu(FIN_DICT_VIDE)
-            return False
+            return False, FIN_DICT_VIDE
         event = choice(list(self.dict_citoyen.items()))
         del self.dict_citoyen[event[0]]
         return event
 
     def maire(self):
         if len(self.dict_maire) == 0:
-            Affichage.fin_jeu(FIN_DICT_VIDE)
-            return False
+            return False, FIN_DICT_VIDE
         event = choice(list(self.dict_maire.items()))
         del self.dict_maire[event[0]]
         return event
         
     def depute(self):
         if len(self.dict_depute) == 0:
-            Affichage.fin_jeu(FIN_DICT_VIDE)
-            return False
+            return False, FIN_DICT_VIDE
         event = choice(list(self.dict_depute.items()))
         del self.dict_depute[event[0]]
         return event
 
     def depregion(self):
         if len(self.dict_depregion) == 0:
-            Affichage.fin_jeu(FIN_DICT_VIDE)
-            return False
+            return False, FIN_DICT_VIDE
         event = choice(list(self.dict_depregion.items()))
         del self.depregion[event[0]]
         return event
 
     def ministre(self):
         if len(self.dict_ministre) == 0:
-            Affichage.fin_jeu(FIN_DICT_VIDE)
-            return False
+            return False, FIN_DICT_VIDE
         event = choice(list(self.dict_ministre.items()))
         del self.dict_ministre[event[0]]
         return event
         
     def president(self):
         if len(self.dict_president) == 0:
-            Affichage.fin_jeu(FIN_DICT_VIDE)
-            return False
+            return False, FIN_DICT_VIDE
         event = choice(list(self.dict_president.items()))
         del self.dict_president[event[0]]
         return event
         
     def presidentnation(self):
         if len(self.dict_presidentnation) == 0:
-            Affichage.fin_jeu(FIN_DICT_VIDE)
-            return False
+            return False, FIN_DICT_VIDE
         event = choice(list(self.dict_presidentnation.items()))
         del self.dict_presidentnation[event[0]]
         return event
