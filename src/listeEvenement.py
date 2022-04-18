@@ -3,7 +3,6 @@ from random import choice
 from bouton import *
 
 from src.utils.constante import CITOYEN, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
-from src.utils.affichage import Affichage
 
 class ListeEvenement:
 
