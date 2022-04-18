@@ -25,12 +25,18 @@ class Gestion:
 
     def get_nom(self) -> str:
         return self.nom
+    
+    def set_grade(self, grade):
+        self.grade = grade
+        
+    def get_grade(self) -> str:
+        return self.grade
 
     def get_event(self) -> None:
         return self.liste_evenements.faire_choix(self.grade)
     
-    def set_event(self, choix) -> None:
-        self.jauges.jauges(choix)
+    def set_event(self, choix, event) -> None:
+        self.jauges.jauges(choix, event, self)
 
     def set_attente_reponse(self, reponse:bool):
         self.attente_reponse = reponse

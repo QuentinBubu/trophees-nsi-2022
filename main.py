@@ -49,7 +49,7 @@ while ouvert:
                     # Du fait que le bouton est laché, il ne peut pas y avoir de bouton clické
                     if bouton.is_clicked():
                         choix = bouton.click()
-                        g.set_event(choix)
+                        g.set_event(choix, evenement)
                         g.set_attente_reponse(False)
                     bouton.set_clicked(False)
 
@@ -81,7 +81,7 @@ while ouvert:
         g.set_fond(screen) # Mettre le fond au grade correspondant
 
     pygame.display.flip()
-    screen.clock.tick(120)
+    screen.clock.tick(60)
 
 
 pygame.quit()
