@@ -20,8 +20,8 @@ class Screen:
         self.set_fond('image/temp_debut.jpg')
         self.clock = pygame.time.Clock()
         self.set_logo('image/logo.png')
-        self.font = pygame.font.SysFont('Candara', 30)
-        self.font50 = pygame.font.SysFont('Candara', 50)
+        self.font = pygame.font.SysFont('Arial', 30)
+        self.font50 = pygame.font.SysFont('Arial', 50)
 
         
     def set_caption(self, caption:str):
