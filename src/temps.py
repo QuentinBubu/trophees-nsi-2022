@@ -1,5 +1,4 @@
 from src.utils.Date import Date
-from src.utils.affichage import Affichage
 
 class Temps:
     LIMITE = 120
@@ -17,7 +16,6 @@ class Temps:
 
     def verification(self) -> bool:
         if self.ajout >= self.LIMITE:
-            Affichage.fin_jeu(1)
             return False
         return True
 
