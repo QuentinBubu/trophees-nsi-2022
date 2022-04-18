@@ -2,7 +2,7 @@ from time import sleep
 from src.screen import Screen
 from src.gestion import Gestion
 from src.utils.texts import T_FIN_DICT_VIDE, T_FIN_TEMPS, T_PROLOGUE
-from src.utils.constante import FIN_DICT_VIDE, FIN_TEMPS, GRADE, EVENT, DATE, NOIR
+from src.utils.constante import FIN, FIN_DICT_VIDE, FIN_TEMPS, GRADE, EVENT, DATE, NOIR
 from pygameSettings import *
 from bouton import *
 
@@ -34,7 +34,9 @@ while ouvert:
             screen.remove_on_screen(screen.PROLOGUE)
             screen.remove_on_screen(EVENT)
             screen.remove_on_screen(GRADE)
+            screen.remove_on_screen(FIN)
             screen.set_screen(pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE))
+            screen.set_fond()
             interragibles[0].set_pos(pourcentage(0.2, 0.8, screen))
             interragibles[1].set_pos(pourcentage(0.7, 0.8, screen))
 
@@ -91,7 +93,7 @@ while ouvert:
             afficher_text(g.jauges.temps.get_date(), screen, screen.font, DATE, (0.12, 0.17))
             g.set_fond(screen) # Mettre le fond au grade correspondant
         else:
-            afficher_text(arret[1], screen, screen.font, 'FIN', arret[2], True, arret[3])
+            afficher_text(arret[1], screen, screen.font, FIN, arret[2], True, arret[3])
 
     pygame.display.flip()
     screen.clock.tick(60)
