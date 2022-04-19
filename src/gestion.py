@@ -10,6 +10,7 @@ class Gestion:
     run = True
     grade = CITOYEN
     attente_reponse = False
+    fond = False
     
     img_corr = {
         CITOYEN        : 'citoyen',
@@ -45,7 +46,11 @@ class Gestion:
         return self.attente_reponse
 
     def set_fond(self, screen):
-        screen.set_fond(f"image/{self.img_corr[self.grade]}.jpg")
+        self.fond = f"image/{self.img_corr[self.grade]}.jpg"
+        screen.set_fond(self.fond)
+
+    def get_fond(self):
+        return self.fond
 
     def retour_true(self):
         return 'oui'

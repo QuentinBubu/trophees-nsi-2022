@@ -82,8 +82,7 @@ class Screen:
     def update(self):
         self.sprites.update()
         self.sprites.draw(self.screen)
-        pygame.display.flip()
-        
+
     def error(self, text:str):
         for sprite in self.get_all_sprites():
             self.remove_sprite(sprite)
