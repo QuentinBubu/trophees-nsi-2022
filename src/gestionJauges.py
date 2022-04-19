@@ -2,7 +2,7 @@ from src.justice import Justice
 from src.popularite import Popularite
 from src.legalite import Legalite
 from src.temps import Temps
-from src.utils.constante import FIN_DICT_VIDE, FIN_PRISON, FIN_TEMPS, CONTINUE
+from src.utils.constante import FIN_DICT_VIDE, FIN_PRISON, FIN_LEGALITE, FIN_TEMPS, CONTINUE
 
 # à tester avec les variables correspondantes
 class GestionJauges:
@@ -23,7 +23,7 @@ class GestionJauges:
         if not self.popularite.add_pop(event[1][choix]['pop']):
             return False, FIN_DICT_VIDE
         if not self.legalite.add_leg(event[1][choix]['legalite']):
-            return False, FIN_PRISON
+            return False, FIN_LEGALITE
         if not self.temps.add_tps(event[1][choix]['temps']):
             return False, FIN_TEMPS
         if not self.justice.lien_justice_legalite(self.legalite):

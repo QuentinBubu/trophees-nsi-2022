@@ -1,8 +1,8 @@
 from time import sleep
 from src.screen import Screen
 from src.gestion import Gestion
-from src.utils.texts import T_FIN_DICT_VIDE, T_FIN_TEMPS, T_PROLOGUE
-from src.utils.constante import FIN, FIN_DICT_VIDE, FIN_TEMPS, GRADE, EVENT, DATE, NOIR
+from src.utils.texts import T_FIN_DICT_VIDE, T_FIN_PRISON, T_FIN_TEMPS, T_PROLOGUE
+from src.utils.constante import FIN, FIN_DICT_VIDE, FIN_PRISON, FIN_TEMPS, GRADE, EVENT, DATE, NOIR, ROUGE
 from pygameSettings import *
 from bouton import *
 
@@ -67,6 +67,10 @@ while ouvert:
                                 if evenement[1] == FIN_TEMPS:
                                     screen.set_fond('image/temps_out.jpg')
                                     arret = (True, T_FIN_TEMPS, (0.5, 0.1), BLANC)
+                                    bouton.set_clicked(False)
+                                elif evenement[1] == FIN_PRISON:
+                                    screen.set_fond('image/justice_out.webp')
+                                    arret = (True, T_FIN_PRISON, (0.3, 0.2), ROUGE)
                                     bouton.set_clicked(False)
 
     if ecran == screen.PROLOGUE:
