@@ -4,7 +4,7 @@ from src.gestion import Gestion
 from src.utils.texts import T_FIN_DICT_VIDE, T_FIN_PRISON, T_FIN_TEMPS, T_PROLOGUE
 from src.utils.constante import FIN, FIN_DICT_VIDE, FIN_PRISON, FIN_TEMPS, GRADE, EVENT, DATE, NOIR, ROUGE
 from pygameSettings import *
-from bouton import *
+from src.bouton import *
 
 g = Gestion()
 ouvert = True
