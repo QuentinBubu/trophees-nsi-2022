@@ -45,16 +45,16 @@ def refresh():
         pygame.draw.rect(screen , (16, 119, 236), (60 ,220 ,justice.get_jus()*4 ,20), 0) #Dessin jauge justice
         if listeEvenement.get_grade() == CITOYEN :
             pygame.draw.rect(screen , (247, 232, 18), (60 ,300 , popularite.get_pop()/(20000/100)*4 ,20), 0) #Dessin de la jauge qui montre la progression de la popularité pour atteindre le prochain grade
-            fond = pygame.image.load('image/imagecitoyen.jpg').convert_alpha()
+            fond = pygame.image.load('image/citoyen.jpg').convert_alpha()
         if listeEvenement.get_grade() == MAIRE :
             pygame.draw.rect(screen , (247, 232, 18), (60 ,300 , popularite.get_pop()/(300000/100)*4 ,20), 0) #Dessin de la jauge qui montre la progression de la popularité pour atteindre le prochain grade
-            fond = pygame.image.load('image/imagemaire.jpg').convert_alpha() 
+            fond = pygame.image.load('image/maire.jpg').convert_alpha() 
         if listeEvenement.get_grade() == DEPUTE :
             pygame.draw.rect(screen , (247, 232, 18), (60 ,300 , popularite.get_pop()/(5000000/100)*4 ,20), 0) #Dessin de la jauge qui montre la progression de la popularité pour atteindre le prochain grade
-            fond = pygame.image.load('image/imagedepute.jpg').convert_alpha() 
+            fond = pygame.image.load('image/depute.jpg').convert_alpha() 
         if listeEvenement.get_grade() == DEPUTE_REGIONAL :
             pygame.draw.rect(screen , (247, 232, 18), (60 ,300 , popularite.get_pop()/(40000000/100)*4 ,20), 0) #Dessin de la jauge qui montre la progression de la popularité pour atteindre le prochain grade
-            fond = pygame.image.load('image/imagedepute_regional.jpg').convert_alpha() 
+            fond = pygame.image.load('image/depRegion.jpg').convert_alpha() 
         if listeEvenement.get_grade() == MINISTRE :
             pygame.draw.rect(screen , (247, 232, 18), (60 ,300 , popularite.get_pop()/(250000000/100)*4 ,20), 0) #Dessin de la jauge qui montre la progression de la popularité pour atteindre le prochain grade
             fond = pygame.image.load('image/imagepygameministre.jpg').convert_alpha() 
