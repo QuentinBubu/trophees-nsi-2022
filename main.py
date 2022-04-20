@@ -23,7 +23,7 @@ while ouvert:
         once = False
         screen.set_fond('image/logo.png')
         pygame.display.flip()
-        sleep(0) # temps de faux chargement
+        sleep(2) # temps de faux chargement
         screen.set_fond('image/temp_debut.jpg')
         ecran = screen.PROLOGUE
 

@@ -7,7 +7,6 @@ class Gestion:
     nom = ""
     liste_evenements = ListeEvenement(CITOYEN)
     jauges = GestionJauges()
-    run = True
     grade = CITOYEN
     attente_reponse = False
     fond = False
