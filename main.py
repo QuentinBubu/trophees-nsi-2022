@@ -1,7 +1,7 @@
 from configparser import LegacyInterpolation
 from re import S
 from time import sleep
-from gestionJauges import GestionJauges
+from src.gestionJauges import GestionJauges
 from jauges_graphiques import Jauges_graphique
 from justice import Justice
 from legalite import Legalite
@@ -33,9 +33,9 @@ interragibles = [
 once = True
 while ouvert:
 
-    jauge_leg.remplissage(Legalite.get_leg(),100)
-    jauge_jus.remplissage(Justice.get_jus(), 100)
-    jauge_pop.remplissage(Popularite.get_pop(), Gestion.max_grade())
+    jauge_leg.remplissage(g.jauges.legalite.get_leg(),100)
+    jauge_jus.remplissage(g.jauges.justice.get_jus(), 100)
+    jauge_pop.remplissage(g.jauges.popularite.get_pop(), g.max_grade())
 
     jauge_leg.actualiser(screen)
     jauge_leg.actualiser(screen) 

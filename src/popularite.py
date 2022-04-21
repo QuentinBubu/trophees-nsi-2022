@@ -1,4 +1,4 @@
-from gestion import Gestion
+from src.gestion import Gestion
 from src.utils.constante import CITOYEN, FIN_GAGNE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.jauge import Jauge
 

@@ -1,4 +1,4 @@
-from popularite import Popularite
+from src.popularite import Popularite
 from src.gestionJauges import GestionJauges
 from src.listeEvenement import ListeEvenement
 from src.utils.constante import CITOYEN, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
