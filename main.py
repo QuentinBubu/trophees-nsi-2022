@@ -24,8 +24,8 @@ jauge_jus.draw(screen)
 jauge_pop.draw(screen)
 
 interragibles = [
-    Bouton(pourcentage(0.2, 0.8, screen), (120, 60), "image/oui.png", "image/oui_c.png", g.retour_true),
-    Bouton(pourcentage(0.7, 0.8, screen), (120, 60), "image/non.png", "image/non_c.png", g.retour_false)
+    Bouton(pourcentage(0.225, 0.79, screen), (120, 60), "image/oui.png", "image/oui_c.png", g.retour_true),
+    Bouton(pourcentage(0.725, 0.8, screen), (120, 60), "image/non.png", "image/non_c.png", g.retour_false)
 ]
 once = True
 while ouvert:
@@ -48,8 +48,8 @@ while ouvert:
             screen.remove_on_screen(FIN)
             screen.set_screen(pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE))
             screen.set_fond()
-            interragibles[0].set_pos(pourcentage(0.2, 0.8, screen))
-            interragibles[1].set_pos(pourcentage(0.7, 0.8, screen))
+            interragibles[0].set_pos(pourcentage(0.225, 0.79, screen))
+            interragibles[1].set_pos(pourcentage(0.725, 0.8, screen))
 
         # click de souris
         if event.type == pygame.MOUSEBUTTONDOWN:
