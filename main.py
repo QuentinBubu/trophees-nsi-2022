@@ -1,3 +1,7 @@
+"""Fichier principal du jeu
+    Il faut run ce fichier pour lancer Head Of States
+"""
+
 from configparser import LegacyInterpolation
 from re import S
 from time import sleep
@@ -15,7 +19,7 @@ arret = (False)
 screen = Screen()
 ecran = screen.WAITING
 
-
+################Définition des jauges et boutons intéractibles########################
 jauge_leg = Jauges_graphique("Legalite",(pourcentage(0.3 ,0.05 ,screen)),(150, 30))
 jauge_jus = Jauges_graphique("Risque d'être détécté par la justice", (pourcentage(0.525, 0.05 , screen)),(150, 30))
 jauge_pop = Jauges_graphique("Popularité requise pour le prochain grade", (pourcentage(0.75, 0.05, screen)),(150, 30))
@@ -27,8 +31,12 @@ interragibles = [
     Bouton(pourcentage(0.225, 0.79, screen), (120, 60), "image/oui.png", "image/oui_c.png", g.retour_true),
     Bouton(pourcentage(0.725, 0.8, screen), (120, 60), "image/non.png", "image/non_c.png", g.retour_false)
 ]
+
+################################################################################
+
 once = True
-while ouvert:
+
+while ouvert:               #Boucle qui garde la fenêtre ouverte
 
     if once:
         once = False

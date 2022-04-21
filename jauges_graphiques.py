@@ -35,6 +35,8 @@ class Jauges_graphique:
         self.font = pygame.font.SysFont('Candara', 16)
         self.target = pourcentage
 
+#################GETTER ET SETTER#################################
+
     def set_descritpion(self, n):
         self.description = n
 
@@ -60,10 +62,23 @@ class Jauges_graphique:
     def _get_middle_pos(self):
         return (self.pos[0]+2, self.pos[1]+2)
 
+######################################################################
+
     def remplissage(self, current, max):
+        """Remplissage de la jauge (en pourcents)
+
+        Args:
+            current (float): pourcentage de remplissage
+            max (int): remplissage max
+        """
         self.pourcentage = current/max
 
     def draw(self, screen : Screen):
+        """Dessine/Créé la jauge
+
+        Args:
+            screen (Screen): fenêtre d'affichage
+        """
         plain = pygame.surface.Surface(self._get_middle_size())
         plain.fill("grey")
         
@@ -71,6 +86,8 @@ class Jauges_graphique:
         contour.fill("black")
 
         if self.set_show_pourcentage:
+            """Affichage du pourcentage sur l'écran
+            """
             text = self.font.render(self.description+" "+str(int(self.pourcentage*100))+"%", False, "black")
         else :
             text = self.font.render(self.description, False, "black")
@@ -80,7 +97,11 @@ class Jauges_graphique:
         screen.screen.blit(text, (self.pos[0], self.pos[1]+self.size[1]))
 
     def actualiser(self, screen:Screen):
+        """Actualisation de la jauge
 
+        Args:
+            screen (Screen): fenêtre d'affichage
+        """
         self.pourcentage = round(self.pourcentage, 2) # on ne veux pas de pourcentage avec trop de virgules
         if self.target < self.pourcentage:
             self.pourcentage -= 0.01

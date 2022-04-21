@@ -29,6 +29,8 @@ class Bouton:
 
         self.clicked = False
 
+######################GETTER ET SETTER###################################
+
     def set_size(self, new_size):
         self.size = new_size
 
@@ -46,7 +48,14 @@ class Bouton:
     def set_clicked(self, state):
         self.clicked = state
 
+#########################################################################
+
     def is_clicked(self):
+        """Renvoie True si le Bouton est cliqué
+
+        Returns:
+            bool : True si cliqué, False si non
+        """
         m_posX, m_posY = pygame.mouse.get_pos()
         if (self.pos[0] < m_posX < self.pos[0] + self.size[0]) and (self.pos[1] < m_posY < self.pos[1] + self.size[1]):
             return True
@@ -57,10 +66,20 @@ class Bouton:
             return self.function()
 
     def draw(self, window: pygame.surface.Surface):
+        """Dessin du bouton
+
+        Args:
+            window (pygame.surface.Surface): surface de dessin
+        """
         if self.clicked:
             window.screen.blit(self.texture_clicked, self.pos)
         else:
             window.screen.blit(self.texture, self.pos)
 
     def actualiser(self, window: pygame.surface.Surface):
+        """actualise le dessin du bouton
+
+        Args:
+            window (pygame.surface.Surface): dessin du bouton
+        """
         self.draw(window)

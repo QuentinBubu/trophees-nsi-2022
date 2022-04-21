@@ -4,6 +4,16 @@ from src.listeEvenement import ListeEvenement
 from src.utils.constante import CITOYEN, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 
 class Gestion:
+    """Gestion globale des grades, evenements et jauges
+
+        nom (str) : nom de la classe
+        liste_evenements (ListeEvenement) : liste des evenements
+        jauges(GestionJauges) : jauges
+        grade(str) : grade
+        attente_reponse(bool) : attente d'une réponse du joueur (oui ou non)
+        fond(bool) : ______________
+        img_corr(dict): Prend le fond correspondant au bon grade
+    """
 
     nom = ""
     liste_evenements = ListeEvenement(CITOYEN)
@@ -20,6 +30,8 @@ class Gestion:
         MINISTRE       : 'ministre',
         PRESIDENT      : 'president'
     }
+
+#######################GETTER ET SETTER##############################
 
     def set_nom(self, nom:str) -> None:
         self.nom = nom
@@ -51,6 +63,8 @@ class Gestion:
 
     def get_fond(self):
         return self.fond
+
+###########################################################################
 
     def retour_true(self):
         return 'oui'

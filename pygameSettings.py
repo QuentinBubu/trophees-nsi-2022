@@ -4,7 +4,17 @@ import pygame
 INTERLIGNE = 10
 
 def display_set_mode(size:tuple):
+    """S'occupe du resize (variation de la taille de la fenêtre)
+
+    Args:
+        size (tuple): taille de la fenêtre
+
+    Returns:
+        Pygame : Redimenssionage
+    """
     return pygame.display.set_mode(size, pygame.RESIZABLE)
+
+########################GETTRE########################
 
 def get_largeur(element:pygame.Surface) -> int:
     return element.get_size()[0]
@@ -12,7 +22,24 @@ def get_largeur(element:pygame.Surface) -> int:
 def get_hauteur(element:pygame.Surface) -> int:
     return element.get_size()[1]
 
+###################################################
+
 def pourcentage(gauche:int, haut:int, parent:pygame.Surface, element:pygame.Surface = None, nb_el:int = 1) -> tuple:
+    """Permet de donner un pourcentage de la hauteur 
+    de la longueur souhaitée par rapport aux dimensions
+    de l'écran
+
+    Args:
+        gauche (int): largeur
+        haut (int): hauteur
+        parent (pygame.Surface): Surface
+        element (pygame.Surface, optionel): _____________________. Par défaut None.
+        nb_el (int, optionel): ______________________. Par défaut 1.
+
+    Returns:
+        tuple: Largeur et Hauteur en pourcentages par rapport aux dimensions de la
+        fenetre
+    """
     screen_taille = parent.get_size()
     if element == None:
         return (gauche * screen_taille[0], haut * screen_taille[1])
@@ -24,6 +51,22 @@ def pourcentage(gauche:int, haut:int, parent:pygame.Surface, element:pygame.Surf
         )
 
 def afficher_text(text, screen, font, nom, position = (0.5, 0.5), antialias = True, color = BLANC, background = None, alpha = 255):
+    """Affiche proprement un texte sur l'écran
+
+    Args:
+        text (_type_): texte
+        screen (_type_): fenêtre d'affichage
+        font (_type_): police d'écriture
+        nom (_type_): nom
+        position (tuple, optionel): Postion sur la fenêtre. Par défaut (0.5, 0.5).
+        antialias (bool, optionel): _description_. Par défaut True.
+        color (_type_, optionel): couleur du texte. Par défaut BLANC.
+        background (_type_, optionel): arrière plan. Par défaut None.
+        alpha (int, optionel): couleur invisible. Par défaut 255.
+
+    Returns:
+        Pygame (sprite): Renvoie un sprite qui est le texte
+    """
     txt_sprite = pygame.sprite.Group()
     textes = text.split('\n')
     textes_traites = []
@@ -40,6 +83,11 @@ def afficher_text(text, screen, font, nom, position = (0.5, 0.5), antialias = Tr
     return txt_sprite
     
 class Text(pygame.sprite.Sprite):
+    """Sprite du texte
+
+    Args:
+        pygame (_type_): sprite
+    """
     def __init__(self, txt, font, antialias, color, background):
         pygame.sprite.Sprite.__init__(self)
         self.image = font.render(txt, antialias, color, background)

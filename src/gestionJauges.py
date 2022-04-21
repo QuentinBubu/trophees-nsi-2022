@@ -8,7 +8,13 @@ from src.utils.constante import FIN_DICT_VIDE, FIN_PRISON, FIN_LEGALITE, FIN_TEM
 class GestionJauges:
 
     def __init__(self) -> None:
-        #recupération de la classe liste_evenement et jauges
+        """Gestion des jauges
+
+        Arguments : popularite(Popularite) : Jauge de Popularité
+                    legalite(Legalite) : Jauge de Légalité
+                    temps(Temps) : Temps, Date
+                    justice(Justice): jauge de Justice
+        """ 
 
         self.popularite = Popularite()   #popularité.get_pop()
         self.legalite = Legalite() #legalite.get_legalite()

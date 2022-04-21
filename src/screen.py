@@ -12,8 +12,16 @@ class Screen:
     on_screen = {}
 
     def __init__(self) -> None:
-        pygame.init()
+        """Initialisation classe Screen pour gerer l'affichage
 
+        Arguments : screen (Pygame) : fenêtre
+                    clock (Pygame) : Fréquence (FPS)
+                    font (Pygame) : Police d'écriture
+                    font50 (Pygame) : Police d'écriture taille 50
+                    set_caption (Pygame) : Titre de la fenêtre
+                    set_fond(Pygame) : Fond de la fenêtre en premier lieu
+        """
+        pygame.init()
         self.screen = pygame.display.set_mode((1280, 720), pygame.RESIZABLE)
         self.clock = pygame.time.Clock()
         self.set_caption('Head Of States')
@@ -22,8 +30,9 @@ class Screen:
         self.set_logo('image/logo.png')
         self.font = pygame.font.SysFont('Arial', 30)
         self.font50 = pygame.font.SysFont('Arial', 50)
-
         
+###################GETTER, SETTER, ADD ET REMOVE##################################
+
     def set_caption(self, caption:str):
         pygame.display.set_caption(caption)
         
@@ -78,6 +87,8 @@ class Screen:
         if nom in list(self.on_screen.keys()):
             self.remove_sprite(self.on_screen[nom])
             del self.on_screen[nom]
+
+############################################################################
 
     def update(self):
         self.sprites.update()

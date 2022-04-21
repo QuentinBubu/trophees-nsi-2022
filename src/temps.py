@@ -1,6 +1,14 @@
 from src.utils.Date import Date
 
 class Temps:
+    """Classe pour gérer et afficher le temps, la date
+
+        Arguments : 
+        LIMITE (int) : Nombre de mois limite
+        actuel (Date) : date actuelle
+        date_ig (str) : date dans le jeu
+        ajout (int) : __________________
+    """
     LIMITE = 120
     actuel = Date.get_date()
     date_ig = "00/00"
