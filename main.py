@@ -1,11 +1,7 @@
 from configparser import LegacyInterpolation
 from re import S
 from time import sleep
-from src.gestionJauges import GestionJauges
 from jauges_graphiques import Jauges_graphique
-from justice import Justice
-from legalite import Legalite
-from popularite import Popularite
 from src.screen import Screen
 from src.gestion import Gestion
 from src.utils.texts import T_FIN_DICT_VIDE, T_FIN_PRISON, T_FIN_TEMPS, T_PROLOGUE
@@ -19,9 +15,10 @@ arret = (False)
 screen = Screen()
 ecran = screen.WAITING
 
-jauge_leg = Jauges_graphique("jauge de la legalite",(pourcentage(0.4 ,0.05 ,screen)),(150, 30))
-jauge_jus = Jauges_graphique("jauge de la justice", (pourcentage(0.4, 0.01 , screen)),(150, 30))
-jauge_pop = Jauges_graphique("jauge de la popularité", (pourcentage(0.4, 0.15, screen)),(150, 30))
+
+jauge_leg = Jauges_graphique("Legalite",(pourcentage(0.3 ,0.05 ,screen)),(150, 30))
+jauge_jus = Jauges_graphique("Risque d'être détécté par la justice", (pourcentage(0.525, 0.05 , screen)),(150, 30))
+jauge_pop = Jauges_graphique("Popularité requise pour le prochain grade", (pourcentage(0.75, 0.05, screen)),(150, 30))
 jauge_leg.draw(screen)
 jauge_jus.draw(screen)
 jauge_pop.draw(screen)
@@ -32,14 +29,6 @@ interragibles = [
 ]
 once = True
 while ouvert:
-
-    jauge_leg.remplissage(g.jauges.legalite.get_leg(),100)
-    jauge_jus.remplissage(g.jauges.justice.get_jus(), 100)
-    jauge_pop.remplissage(g.jauges.popularite.get_pop(), g.max_grade())
-
-    jauge_leg.actualiser(screen)
-    jauge_leg.actualiser(screen) 
-    jauge_pop.actualiser(screen)   
 
     if once:
         once = False
@@ -64,6 +53,7 @@ while ouvert:
 
         # click de souris
         if event.type == pygame.MOUSEBUTTONDOWN:
+    
             # click gauche :
             if event.button == 1:
                 for bouton in interragibles:
@@ -72,6 +62,7 @@ while ouvert:
 
         # lacher le clic
         if event.type == pygame.MOUSEBUTTONUP:
+    
             # clic gauche :
             if event.button == 1:
                 if ecran == screen.PROLOGUE:
@@ -97,7 +88,9 @@ while ouvert:
 
     if ecran == screen.PROLOGUE:
         afficher_text(T_PROLOGUE, screen, screen.font, screen.PROLOGUE, (0.5, 0.5), True, BLANC)
+
     elif ecran == screen.MAIN: # en attente de réponse
+
         if not g.get_attente_reponse() and not arret: # Si il n'attend pas de réponses
             screen.remove_on_screen(screen.PROLOGUE)
             evenement = g.get_event() # Charger un événement
@@ -117,6 +110,13 @@ while ouvert:
             afficher_text(g.grade.capitalize(), screen, screen.font50, GRADE, (0.12, 0.055))
             afficher_text(evenement[1]['titre'], screen, screen.font, EVENT)
             afficher_text(g.jauges.temps.get_date(), screen, screen.font, DATE, (0.12, 0.17))
+            jauge_leg.remplissage(g.jauges.legalite.get_leg(),100)
+            jauge_jus.remplissage(g.jauges.justice.get_jus(), 100)
+            jauge_pop.remplissage(g.jauges.popularite.get_pop(), g.max_grade())
+            jauge_leg.actualiser(screen)
+            jauge_jus.actualiser(screen) 
+            jauge_pop.actualiser(screen) 
+
         else:
             afficher_text(arret[1], screen, screen.font, FIN, arret[2], True, arret[3])
     pygame.display.flip()

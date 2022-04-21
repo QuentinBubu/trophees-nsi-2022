@@ -32,7 +32,7 @@ class Jauges_graphique:
         
         self._show_pourcentage = show_pourcentage
 
-        self.font = pygame.font.SysFont('Candara', 20)
+        self.font = pygame.font.SysFont('Candara', 16)
         self.target = pourcentage
 
     def set_descritpion(self, n):
@@ -74,7 +74,6 @@ class Jauges_graphique:
             text = self.font.render(self.description+" "+str(int(self.pourcentage*100))+"%", False, "black")
         else :
             text = self.font.render(self.description, False, "black")
-
 
         screen.screen.blit(contour, self.pos)
         screen.screen.blit(plain, self._get_middle_pos())
