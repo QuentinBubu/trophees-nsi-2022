@@ -1,4 +1,5 @@
-from src.utils.constante import FIN_GAGNE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from gestion import Gestion
+from src.utils.constante import CITOYEN, FIN_GAGNE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 from src.jauge import Jauge
 
 #Popularité hérite de Jauge
@@ -59,3 +60,4 @@ class Popularite(Jauge):
         if pop >= 4000000000 :                                          #arrivé au grace maximal, président des nations, fin du jeu.
             gestion.set_grade(PRESIDENT_DES_NATIONS)
             return False, FIN_GAGNE
+

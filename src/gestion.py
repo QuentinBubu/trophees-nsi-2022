@@ -1,6 +1,7 @@
+from popularite import Popularite
 from src.gestionJauges import GestionJauges
 from src.listeEvenement import ListeEvenement
-from src.utils.constante import CITOYEN, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT
+from src.utils.constante import CITOYEN, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 
 class Gestion:
 
@@ -55,3 +56,25 @@ class Gestion:
         return 'oui'
     def retour_false(self):
         return 'non'
+
+    def max_grade(self):
+        """Renvoie le nombre d'ahdérants à atteindre pour passer au grade
+        suivant pour chaque grade
+
+        return : max (int)
+
+        """
+        if self.get_grade() == CITOYEN :
+            return 20000
+        if self.get_grade() == MAIRE :
+            return 300000
+        if self.get_grade() == DEPUTE :
+            return 5000000
+        if self.get_grade() == DEPUTE_REGIONAL :
+            return 40000000
+        if self.get_grade() == MINISTRE :
+            return 250000000
+        if self.get_grade() == PRESIDENT :
+            return 4000000000
+        if self.get_grade() == PRESIDENT_DES_NATIONS :
+            return Popularite.get_pop()

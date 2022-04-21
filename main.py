@@ -1,4 +1,11 @@
+from configparser import LegacyInterpolation
+from re import S
 from time import sleep
+from gestionJauges import GestionJauges
+from jauges_graphiques import Jauges_graphique
+from justice import Justice
+from legalite import Legalite
+from popularite import Popularite
 from src.screen import Screen
 from src.gestion import Gestion
 from src.utils.texts import T_FIN_DICT_VIDE, T_FIN_PRISON, T_FIN_TEMPS, T_PROLOGUE
@@ -12,13 +19,28 @@ arret = (False)
 screen = Screen()
 ecran = screen.WAITING
 
+jauge_leg = Jauges_graphique("jauge de la legalite",(pourcentage(0.4 ,0.05 ,screen)),(150, 30))
+jauge_jus = Jauges_graphique("jauge de la justice", (pourcentage(0.4, 0.01 , screen)),(150, 30))
+jauge_pop = Jauges_graphique("jauge de la popularité", (pourcentage(0.4, 0.15, screen)),(150, 30))
+jauge_leg.draw(screen)
+jauge_jus.draw(screen)
+jauge_pop.draw(screen)
+
 interragibles = [
     Bouton(pourcentage(0.2, 0.8, screen), (120, 60), "image/oui.png", "image/oui_c.png", g.retour_true),
     Bouton(pourcentage(0.7, 0.8, screen), (120, 60), "image/non.png", "image/non_c.png", g.retour_false)
 ]
 once = True
 while ouvert:
-    
+
+    jauge_leg.remplissage(Legalite.get_leg(),100)
+    jauge_jus.remplissage(Justice.get_jus(), 100)
+    jauge_pop.remplissage(Popularite.get_pop(), Gestion.max_grade())
+
+    jauge_leg.actualiser(screen)
+    jauge_leg.actualiser(screen) 
+    jauge_pop.actualiser(screen)   
+
     if once:
         once = False
         screen.set_fond('image/logo.png')
