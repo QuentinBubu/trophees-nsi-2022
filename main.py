@@ -58,6 +58,9 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             screen.set_fond()
             interragibles[0].set_pos(pourcentage(0.225, 0.79, screen))
             interragibles[1].set_pos(pourcentage(0.725, 0.8, screen))
+            jauge_leg.set_pos((pourcentage(0.3 ,0.05 ,screen)))
+            jauge_jus.set_pos((pourcentage(0.525, 0.05 , screen)))
+            jauge_pop.set_pos((pourcentage(0.75, 0.05, screen)))
 
         # click de souris
         if event.type == pygame.MOUSEBUTTONDOWN:
