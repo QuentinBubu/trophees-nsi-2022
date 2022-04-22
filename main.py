@@ -22,7 +22,7 @@ ecran = screen.WAITING
 ################Définition des jauges et boutons intéractibles########################
 jauge_leg = Jauges_graphique("Legalite",(pourcentage(0.3 ,0.05 ,screen)),(150, 30))
 jauge_jus = Jauges_graphique("Risque d'être détécté par la justice", (pourcentage(0.525, 0.05 , screen)),(150, 30))
-jauge_pop = Jauges_graphique("Popularité requise pour le prochain grade", (pourcentage(0.75, 0.05, screen)),(150, 30))
+jauge_pop = Jauges_graphique("Progression de la opularité pour le prochain grade", (pourcentage(0.75, 0.05, screen)),(150, 30))
 jauge_leg.draw(screen)
 jauge_jus.draw(screen)
 jauge_pop.draw(screen)
