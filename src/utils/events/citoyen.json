@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "loi",
+        "titre": "Sortir les poubelles",
         "oui": {
             "pop": 30000,
             "legalite": 50,
@@ -13,7 +13,7 @@
         }
     },
     "event2": {
-        "titre": "arret",
+        "titre": "Faire les courses",
         "oui": {
             "pop": 30000,
             "legalite": 50,
@@ -26,7 +26,7 @@
         }
     },
     "event3": {
-        "titre": "proces",
+        "titre": "Aider un voisin",
         "oui": {
             "pop": 3000,
             "legalite": 50,
@@ -39,7 +39,7 @@
         }
     },
     "event4": {
-        "titre": "maltraitance",
+        "titre": "Travailler dans une association",
         "oui": {
             "pop": 250000,
             "legalite": 50,
@@ -52,7 +52,7 @@
         }
     },
     "event5": {
-        "titre": "ecole",
+        "titre": "Aider des personnes âgées",
         "oui": {
             "pop": 7000,
             "legalite": 50,
@@ -65,7 +65,7 @@
         }
     },
     "event6": {
-        "titre": "budjet",
+        "titre": "faire une fête",
         "oui": {
             "pop": 4000,
             "legalite": 50,
@@ -78,7 +78,7 @@
         }
     },
     "event7": {
-        "titre": "parite",
+        "titre": "accompagnée une sortie scolaire",
         "oui": {
             "pop": 170000,
             "legalite": 50,
