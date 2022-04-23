@@ -18,6 +18,14 @@ class Temps:
         self.add_tps(0)
 
     def add_tps(self, ajouter:int) -> bool:
+        """Ajoute du temps
+
+        Args:
+            ajouter (int): valeur à ajouter
+
+        Returns:
+            bool: couple mois,année
+        """
         self.ajout += ajouter
         self.date_ig = Date.mois_ig_txt(self.ajout)
         return False if not self.verification() else True

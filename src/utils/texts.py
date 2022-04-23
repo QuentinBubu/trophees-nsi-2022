@@ -1,3 +1,5 @@
+"""Textes affichés à la fin du jeu pour toutes les fins possibles"""
+
 T_PROLOGUE = """Il était une fois, un simple citoyen.
 Il voulait révolutionner le monde!
 Il décida donc de se lancer dans sa carrière

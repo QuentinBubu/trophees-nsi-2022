@@ -1,7 +1,6 @@
 """
-Créé par Anton Appel, le 17/04/2022
 
-Des jauges graphiques genre
+Des jauges graphiques du type :
 
     ---------------------
     |######             |

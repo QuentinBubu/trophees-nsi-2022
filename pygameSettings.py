@@ -54,14 +54,14 @@ def afficher_text(text, screen, font, nom, position = (0.5, 0.5), antialias = Tr
     """Affiche proprement un texte sur l'écran
 
     Args:
-        text (_type_): texte
-        screen (_type_): fenêtre d'affichage
-        font (_type_): police d'écriture
-        nom (_type_): nom
+        text (str): texte
+        screen (Screen): fenêtre d'affichage
+        font (str): police d'écriture
+        nom (str): nom
         position (tuple, optionel): Postion sur la fenêtre. Par défaut (0.5, 0.5).
         antialias (bool, optionel): _description_. Par défaut True.
-        color (_type_, optionel): couleur du texte. Par défaut BLANC.
-        background (_type_, optionel): arrière plan. Par défaut None.
+        color (str, optionel): couleur du texte. Par défaut BLANC.
+        background (______________, optionel): arrière plan. Par défaut None.
         alpha (int, optionel): couleur invisible. Par défaut 255.
 
     Returns:

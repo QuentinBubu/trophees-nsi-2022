@@ -1,3 +1,6 @@
+"""Fichier constante, toutes les constantes du jeu sont présentes ici (type str, int et tuple)
+"""
+
 CITOYEN = "citoyen"
 MAIRE = "maire"
 DEPUTE = "député"

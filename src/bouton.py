@@ -1,6 +1,4 @@
 """
-Créé par Anton Appel, le 16/04/2022
-
 Une simple classe de boutons
 """
 
@@ -62,6 +60,11 @@ class Bouton:
         return False
 
     def click(self):
+        """Etat de clique du bouton
+
+        Returns:
+            NoneType ou ______________ : ____________________
+        """
         if self.function != None:
             return self.function()
 

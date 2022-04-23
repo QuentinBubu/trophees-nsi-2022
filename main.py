@@ -13,6 +13,8 @@ from src.utils.constante import FIN, FIN_DICT_VIDE, FIN_PRISON, FIN_TEMPS, GRADE
 from pygameSettings import *
 from src.bouton import *
 
+########################Définition variables globales################################
+
 g = Gestion()
 ouvert = True
 arret = (False)
@@ -21,8 +23,8 @@ ecran = screen.WAITING
 
 ################Définition des jauges et boutons intéractibles########################
 jauge_leg = Jauges_graphique("Legalite",(pourcentage(0.3 ,0.05 ,screen)),(150, 30))
-jauge_jus = Jauges_graphique("Risque d'être détécté par la justice", (pourcentage(0.525, 0.05 , screen)),(150, 30))
-jauge_pop = Jauges_graphique("Progression de la opularité pour le prochain grade", (pourcentage(0.75, 0.05, screen)),(150, 30))
+jauge_jus = Jauges_graphique("Risque d'être détécté par la justice", (pourcentage(0.52, 0.05 , screen)),(150, 30))
+jauge_pop = Jauges_graphique("Progression de la popularité pour le prochain grade", (pourcentage(0.74, 0.05, screen)),(150, 30))
 jauge_leg.draw(screen)
 jauge_jus.draw(screen)
 jauge_pop.draw(screen)
@@ -38,7 +40,7 @@ once = True
 
 while ouvert:               #Boucle qui garde la fenêtre ouverte
 
-    if once:
+    if once:            #Ecran de chargement
         once = False
         screen.set_fond('image/logo.png')
         pygame.display.flip()
@@ -47,9 +49,9 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
         ecran = screen.PROLOGUE
 
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+        if event.type == pygame.QUIT:               #le joueur quitte le jeu
             ouvert = False
-        if event.type == pygame.VIDEORESIZE:
+        if event.type == pygame.VIDEORESIZE:        #Le joueur redimensionne la fenêtre, donc il faut tout remettre à la bonne taille
             screen.remove_on_screen(screen.PROLOGUE)
             screen.remove_on_screen(EVENT)
             screen.remove_on_screen(GRADE)
@@ -97,7 +99,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
                                     arret = (True, T_FIN_PRISON, (0.3, 0.2), ROUGE)
                                     bouton.set_clicked(False)
 
-    if ecran == screen.PROLOGUE:
+    if ecran == screen.PROLOGUE:                        #Ecran de prologue
         afficher_text(T_PROLOGUE, screen, screen.font, screen.PROLOGUE, (0.5, 0.5), True, BLANC)
 
     elif ecran == screen.MAIN: # en attente de réponse
@@ -131,7 +133,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
         else:
             afficher_text(arret[1], screen, screen.font, FIN, arret[2], True, arret[3])
     pygame.display.flip()
-    screen.clock.tick(60)
+    screen.clock.tick(60)           #Fréquence d'affichage (60FPS)
 
 
 pygame.quit()

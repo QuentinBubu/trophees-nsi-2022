@@ -4,7 +4,17 @@ from random import choice
 from src.utils.constante import CITOYEN, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 
 class ListeEvenement:
+    """Liste de tous les évènements du jeu
 
+    Arguments : 
+    dict_citoyen (dict) : évènements concernant le grade citoyen
+    dict_maire (dict) : évènements concernant le grade maire
+    dict_depute (dict) : évènements concernant le grade député
+    dict_depregion (dict) : évènements concernant le grade député régional
+    dict_ministre (dict) : évènements concernant le grade ministre
+    dict_president (dict) : évènements concernant le grade president
+    dict_presidentnation (dict) : ___________________________
+    """
     dict_citoyen         = {}
     dict_maire           = {}
     dict_depute          = {}
@@ -13,7 +23,7 @@ class ListeEvenement:
     dict_president       = {}
     dict_presidentnation = {}
     
-    def __init__(self, grade):
+    def __init__(self, grade):                     #Importation des fichiers json pour les dictionnaires des évènements
         with open('src/utils/events/citoyen.json')         as f: self.dict_citoyen         = load(f)
         with open('src/utils/events/maire.json')           as f: self.dict_maire           = load(f)
         with open('src/utils/events/depute.json')          as f: self.dict_depute          = load(f)
@@ -23,12 +33,18 @@ class ListeEvenement:
         with open('src/utils/events/presidentNation.json') as f: self.dict_presidentnation = load(f)
         self.grade = grade
 
+##########################GETTER ET SETTER###########################
+
     def get_grade(self) -> str:
         return self.grade
 
     def set_grade(self, grade):
         self.grade = grade
 
+#########################################################################
+
+
+#############################Fonctions renvoyant un évènement relatif à chaque grade###################################### 
     def citoyen(self):
         if len(self.dict_citoyen) == 0:
             return False, FIN_DICT_VIDE
@@ -78,7 +94,17 @@ class ListeEvenement:
         del self.dict_presidentnation[event[0]]
         return event
 
+##########################################################################################
+
     def faire_choix(self, grade):
+        """Choisi un évènement pour le bon grade
+
+        Args:
+            grade (str): grade
+
+        Returns:
+            bool + str: si le grade est inconnu (erreur)
+        """
         if grade == CITOYEN:
             event = self.citoyen()
         elif grade == MAIRE:
