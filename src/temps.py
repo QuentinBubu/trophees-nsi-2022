@@ -31,11 +31,21 @@ class Temps:
         return False if not self.verification() else True
 
     def verification(self) -> bool:
+        """Vérifie que le temps qu'on veut ajouter est correct (>0)
+
+        Returns:
+            bool: True si ok, False sinon
+        """
         if self.ajout >= self.LIMITE:
             return False
         return True
 
     def get_date(self) -> str:
+        """getter date
+
+        Returns:
+            str: date
+        """
         return self.date_ig
 
     def __str__(self) -> str:

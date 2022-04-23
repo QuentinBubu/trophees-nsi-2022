@@ -48,7 +48,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
         screen.set_fond('image/temp_debut.jpg')
         ecran = screen.PROLOGUE
 
-    for event in pygame.event.get():
+    for event in pygame.event.get():                #Boucle qui va vérifier les actions du joueur (clique, clavier...)
         if event.type == pygame.QUIT:               #le joueur quitte le jeu
             ouvert = False
         if event.type == pygame.VIDEORESIZE:        #Le joueur redimensionne la fenêtre, donc il faut tout remettre à la bonne taille
