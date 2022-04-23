@@ -110,7 +110,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             g.set_attente_reponse(True) # Le mettre en attente d'un réponse
             if evenement[0] == False: # Si il se passe quelque chose de particulier
                 if evenement[1] == FIN_DICT_VIDE:
-                    screen.set_fond('image/pop_out.webp')
+                    screen.set_fond('image/pop_out.jpg')
                     arret = (True, T_FIN_DICT_VIDE, (0.5, 0.2), NOIR)
 
                 #screen.error(evenement[1])
