@@ -13,7 +13,7 @@
         }
     },
     "event2": {
-        "titre": "plastique",
+        "titre": "stoper la vente du plastique",
         "oui": {
             "pop": 350000,
             "legalite": 50,
@@ -26,7 +26,7 @@
         }
     },
     "event3": {
-        "titre": "musee",
+        "titre": "Fermer un musée historique",
         "oui": {
             "pop": 671428,
             "legalite": 50,
@@ -39,7 +39,7 @@
         }
     },
     "event4": {
-        "titre": "travail",
+        "titre": "Diminuer le temps de travail",
         "oui": {
             "pop": 750000,
             "legalite": 50,
@@ -52,7 +52,7 @@
         }
     },
     "event5": {
-        "titre": "argent",
+        "titre": "Voler 50% de l'argent d'une entreprise",
         "oui": {
             "pop": 671428,
             "legalite": 50,
@@ -65,7 +65,7 @@
         }
     },
     "event6": {
-        "titre": "animaux",
+        "titre": "Loi contre la maltraitance animal",
         "oui": {
             "pop": 4700400,
             "legalite": 50,
@@ -78,7 +78,7 @@
         }
     },
     "event7": {
-        "titre": "jeune",
+        "titre": "Faire en sorte que les jeunes puissent voter à partir de 16 ans",
         "oui": {
             "pop": 450050,
             "legalite": 50,
