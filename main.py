@@ -31,12 +31,18 @@ jauge_pop.draw(screen)
 
 interragibles = [
     Bouton(pourcentage(0.225, 0.79, screen), (120, 60), "image/oui.png", "image/oui_c.png", g.retour_true),
-    Bouton(pourcentage(0.725, 0.8, screen), (120, 60), "image/non.png", "image/non_c.png", g.retour_false)
+    Bouton(pourcentage(0.725, 0.8, screen), (120, 60), "image/non.png", "image/non_c.png", g.retour_false),
+]
+
+sound = [
+    Bouton(pourcentage(0.95, 0.9, screen), (64, 64), "image/mute.png", "image/mute.png", screen.play_music),
+    Bouton(pourcentage(0.95, 0.9, screen), (64, 64), "image/sound.png", "image/sound.png", screen.stop_music)
 ]
 
 ################################################################################
 
 once = True
+
 
 while ouvert:               #Boucle qui garde la fenêtre ouverte
 
@@ -47,6 +53,10 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
         sleep(2) # temps de faux chargement
         screen.set_fond('image/temp_debut.jpg')
         ecran = screen.PROLOGUE
+        screen.play_music()
+        sound[1].actualiser(screen)
+        sound[0].set_pos(pourcentage(0.95, 0.9, screen))
+        sound[1].set_pos(pourcentage(0.95, 0.9, screen))
 
     for event in pygame.event.get():                #Boucle qui va vérifier les actions du joueur (clique, clavier...)
         if event.type == pygame.QUIT:               #le joueur quitte le jeu
@@ -60,6 +70,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             screen.set_fond()
             interragibles[0].set_pos(pourcentage(0.225, 0.79, screen))
             interragibles[1].set_pos(pourcentage(0.725, 0.8, screen))
+            sound[screen.music].set_pos(pourcentage(0.95, 0.9, screen))
             jauge_leg.set_pos((pourcentage(0.3 ,0.05 ,screen)))
             jauge_jus.set_pos((pourcentage(0.525, 0.05 , screen)))
             jauge_pop.set_pos((pourcentage(0.75, 0.05, screen)))
@@ -69,9 +80,10 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
     
             # click gauche :
             if event.button == 1:
-                for bouton in interragibles:
+                for bouton in interragibles and sound:
                     # Si le bouton est clické, alors sont état est clické
                     bouton.set_clicked(bouton.is_clicked())
+
 
         # lacher le clic
         if event.type == pygame.MOUSEBUTTONUP:
@@ -98,6 +110,10 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
                                     screen.set_fond('image/justice_out.webp')
                                     arret = (True, T_FIN_PRISON, (0.3, 0.2), ROUGE)
                                     bouton.set_clicked(False)
+                    for bouton in sound:
+                        if bouton.is_clicked() and not arret:
+                            bouton.click()
+                            bouton.set_clicked(False)
 
     if ecran == screen.PROLOGUE:                        #Ecran de prologue
         afficher_text(T_PROLOGUE, screen, screen.font, screen.PROLOGUE, (0.5, 0.5), True, BLANC)
@@ -119,6 +135,8 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             for i in interragibles: # Ajout des boutons oui/non
                 i.actualiser(screen)
                 i.set_clicked(False)
+            sound[screen.music].actualiser(screen)
+            sound[screen.music].set_clicked(False)
             # Et on remplace par les nouvelles infos
             afficher_text(g.grade.capitalize(), screen, screen.font50, GRADE, (0.12, 0.055))
             afficher_text(evenement[1]['titre'], screen, screen.font, EVENT)
