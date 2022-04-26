@@ -1,10 +1,9 @@
 from random import randint
-from src.jauge import Jauge
 from src.utils.affichage import Affichage
 
 #Justice hérite de Jauge
 
-class Justice(Jauge):
+class Justice:
 
     def __init__(self, justice: float = 0) -> None:
         """Jauge de la justice

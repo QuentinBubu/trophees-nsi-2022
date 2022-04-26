@@ -11,7 +11,6 @@ Des jauges graphiques du type :
 
 import pygame
 from src.screen import *
-import pygameSettings
 
 
 class Jauges_graphique:

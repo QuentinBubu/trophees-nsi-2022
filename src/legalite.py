@@ -1,8 +1,6 @@
-from src.jauge import Jauge
-
 #Legalite qui hérite de Jauge
 
-class Legalite(Jauge):
+class Legalite:
 
     def __init__(self, legalite : float = 100) -> None:
         """Jauge de la Légalité

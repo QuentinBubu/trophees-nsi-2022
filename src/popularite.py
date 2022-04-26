@@ -1,9 +1,8 @@
-from src.utils.constante import CITOYEN, FIN_GAGNE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
-from src.jauge import Jauge
+from src.utils.constante import FIN_GAGNE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
 
 #Popularité hérite de Jauge
 
-class Popularite(Jauge):
+class Popularite:
 
     def __init__(self, popularite: int = 10) -> None:
         super().__init__()

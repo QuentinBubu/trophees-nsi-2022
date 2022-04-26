@@ -2,8 +2,6 @@
     Il faut run ce fichier pour lancer Head Of States
 """
 
-from configparser import LegacyInterpolation
-from re import S
 from time import sleep
 from jauges_graphiques import Jauges_graphique
 from src.screen import Screen
