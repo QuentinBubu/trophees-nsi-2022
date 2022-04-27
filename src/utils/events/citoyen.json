@@ -1,91 +1,91 @@
 {
     "event1": {
-        "titre": "loi",
+        "titre": "Faire des demandes pour des passages\nplus réguliers des éboueurs",
         "oui": {
-            "pop": 30000,
+            "pop": 2000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 4000,
+            "pop": -500,
             "legalite": 50,
             "temps": 1
         }
     },
     "event2": {
-        "titre": "arret",
+        "titre": "Demander la mise en place de l'aide à la personne\npour faire leur courses (sans conditions d'accès)",
         "oui": {
-            "pop": 30000,
+            "pop": 5000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 3000,
+            "pop": 3500,
             "legalite": 50,
             "temps": 1
         }
     },
     "event3": {
-        "titre": "proces",
+        "titre": "Aider les personnes de votre quartiers pour différentes tâches",
         "oui": {
-            "pop": 30000,
+            "pop": 1000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 600,
+            "pop": -200,
             "legalite": 50,
             "temps": 1
         }
     },
     "event4": {
-        "titre": "maltraitance",
+        "titre": "Travailler bénévolement dans une association à but lucratif",
         "oui": {
-            "pop": 250000,
+            "pop": 1500,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 500,
+            "pop": 2500,
             "legalite": 50,
             "temps": 1
         }
     },
     "event5": {
-        "titre": "ecole",
+        "titre": "Aider des personnes âgées",
         "oui": {
-            "pop": 70000,
+            "pop": 7000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 3000,
+            "pop": 2500,
             "legalite": 50,
             "temps": 1
         }
     },
     "event6": {
-        "titre": "budjet",
+        "titre": "organiser une fête",
         "oui": {
-            "pop": 40000,
-            "legalite": 50,
-            "temps": 1
-        },
-        "non": {
-            "pop": 50000,
-            "legalite": 50,
-            "temps": 1
-        }
-    },
-    "event7": {
-        "titre": "parite",
-        "oui": {
-            "pop": 170000,
+            "pop": 1000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
             "pop": 600,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event7": {
+        "titre": "être accompagnateur d'une ou plusieurs sorties scolaire",
+        "oui": {
+            "pop": 5000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": -200,
             "legalite": 50,
             "temps": 1
         }

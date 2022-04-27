@@ -1,91 +1,91 @@
 {
     "event1": {
-        "titre": "patrimoine",
+        "titre": "Changer les taxes sur le patrimoines",
         "oui": {
-            "pop": 700,
+            "pop": 65000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 100,
+            "pop": 45000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event2": {
-        "titre": "papier",
+        "titre": "réduire l'utilisation du papier et développper le numérique",
         "oui": {
-            "pop": 250,
+            "pop": 50000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 50,
+            "pop": 45000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event3": {
-        "titre": "salon",
+        "titre": "développer divers salon, bar, commerce de votre ville",
         "oui": {
-            "pop": 450,
+            "pop": 45000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 100,
+            "pop": 35000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event4": {
-        "titre": "poubelle",
+        "titre": "accorder plus de droit aux agents municipauux",
         "oui": {
-            "pop": 250,
+            "pop": 65000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 100,
+            "pop": -5000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event5": {
-        "titre": "degradation",
+        "titre": "Lutte contre les dégradations faites",
         "oui": {
-            "pop": 500,
+            "pop": 54000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 50,
+            "pop": -7000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event6": {
-        "titre": "argent",
+        "titre": "augmenter le RSA",
         "oui": {
-            "pop": 400,
+            "pop": -5000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 300,
+            "pop": 25000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event7": {
-        "titre": "election",
+        "titre": "participer à d'autres éléctions",
         "oui": {
-            "pop": 450,
+            "pop": 16000,
             "legalite": 50,
             "temps": 4
         },
         "non": {
-            "pop": 50,
+            "pop": 35000,
             "legalite": 50,
             "temps": 1
         }
