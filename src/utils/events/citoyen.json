@@ -1,52 +1,52 @@
 {
     "event1": {
-        "titre": "Sortir les poubelles",
+        "titre": "Faire des demandes pour des passages\nplus réguliers des éboueurs",
         "oui": {
-            "pop": 30000,
+            "pop": 2000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 4000,
+            "pop": -500,
             "legalite": 50,
             "temps": 1
         }
     },
     "event2": {
-        "titre": "Faire les courses",
+        "titre": "Demander la mise en place de l'aide à la personne\npour faire leur courses (sans conditions d'accès)",
         "oui": {
-            "pop": 30000,
+            "pop": 5000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 3000,
+            "pop": 3500,
             "legalite": 50,
             "temps": 1
         }
     },
     "event3": {
-        "titre": "Aider un voisin",
+        "titre": "Aider les personnes de votre quartiers pour différentes tâches",
         "oui": {
-            "pop": 3000,
+            "pop": 1000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 600,
+            "pop": -200,
             "legalite": 50,
             "temps": 1
         }
     },
     "event4": {
-        "titre": "Travailler dans une association",
+        "titre": "Travailler bénévolement dans une association à but lucratif",
         "oui": {
-            "pop": 250000,
+            "pop": 1500,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 500,
+            "pop": 2500,
             "legalite": 50,
             "temps": 1
         }
@@ -59,33 +59,33 @@
             "temps": 1
         },
         "non": {
-            "pop": 3000,
+            "pop": 2500,
             "legalite": 50,
             "temps": 1
         }
     },
     "event6": {
-        "titre": "Faire une fête",
+        "titre": "organiser une fête",
         "oui": {
-            "pop": 4000,
-            "legalite": 50,
-            "temps": 1
-        },
-        "non": {
-            "pop": 5000,
-            "legalite": 50,
-            "temps": 1
-        }
-    },
-    "event7": {
-        "titre": "Accompagner une sortie scolaire",
-        "oui": {
-            "pop": 170000,
+            "pop": 1000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
             "pop": 600,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event7": {
+        "titre": "être accompagnateur d'une ou plusieurs sorties scolaire",
+        "oui": {
+            "pop": 5000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": -200,
             "legalite": 50,
             "temps": 1
         }

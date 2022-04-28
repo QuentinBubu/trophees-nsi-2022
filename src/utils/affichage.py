@@ -3,11 +3,13 @@ from src.utils.texts import T_FIN_GAGNE, T_FIN_TEMPS, T_FIN_PRISON, T_FIN_DICT_V
 
 class Affichage:
     @staticmethod
-    def erreur(erreur:str) -> None:
-        print(erreur)
+    def fin_jeu(fin:int, screen) -> None:
+        """Différentes fins du jeu
 
-    @staticmethod
-    def fin_jeu(fin:int) -> None:
+        Args:
+            fin (int): numéro de la fin
+            screen (Screen): fenêtre d'affichage
+        """
         if fin == FIN_GAGNE:
             print(T_FIN_GAGNE)
         elif fin == FIN_TEMPS:
