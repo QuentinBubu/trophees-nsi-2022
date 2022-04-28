@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "confiner",
+        "titre": "Confiner",
         "oui": {
             "pop": 350500,
             "legalite": 50,
@@ -13,7 +13,7 @@
         }
     },
     "event2": {
-        "titre": "stoper la vente du plastique",
+        "titre": "Stopper la vente du plastique",
         "oui": {
             "pop": 350000,
             "legalite": 50,
@@ -65,7 +65,7 @@
         }
     },
     "event6": {
-        "titre": "Loi contre la maltraitance animal",
+        "titre": "Loi contre la maltraitance animale",
         "oui": {
             "pop": 4700400,
             "legalite": 50,
