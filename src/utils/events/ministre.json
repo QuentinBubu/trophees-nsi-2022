@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "Voter la loi pour l'égaliter Homme, Femme",
+        "titre": "Voter la loi pour l'égalité Homme-Femme",
         "oui": {
             "pop": 17654854,
             "legalite": 50,
@@ -65,7 +65,7 @@
         }
     },
     "event6": {
-        "titre": "Aidé les victimes d'une catastrophe naturel",
+        "titre": "Aider les victimes d'une catastrophe naturelle",
         "oui": {
             "pop": 13999000,
             "legalite": 50,
