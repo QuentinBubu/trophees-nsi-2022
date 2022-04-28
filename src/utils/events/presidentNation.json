@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "Mettre en place la loi Marcial",
+        "titre": "Mettre en place la loi Martiale",
         "oui": {
             "pop": 3964285714,
             "legalite": 50,
@@ -26,7 +26,7 @@
         }
     },
     "event3": {
-        "titre": "Alléger de nouveaux les prisons",
+        "titre": "Alléger de nouveau les prisons",
         "oui": {
             "pop": 3964285714,
             "legalite": 50,
