@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "voter des lois",
+        "titre": "Voter des lois",
         "oui": {
             "pop": 30000,
             "legalite": 50,
@@ -13,7 +13,7 @@
         }
     },
     "event2": {
-        "titre": "poser des arrêts",
+        "titre": "Poser des arrêts",
         "oui": {
             "pop": 30000,
             "legalite": 50,
@@ -26,7 +26,7 @@
         }
     },
     "event3": {
-        "titre": "Faire un procet à une grande boite",
+        "titre": "Faire un procès à une grande boîte",
         "oui": {
             "pop": 3000,
             "legalite": 50,
@@ -39,7 +39,7 @@
         }
     },
     "event4": {
-        "titre": "faire passer une loi contre la maltraitance",
+        "titre": "Faire passer une loi contre la maltraitance",
         "oui": {
             "pop": 250000,
             "legalite": 50,
@@ -52,7 +52,7 @@
         }
     },
     "event5": {
-        "titre": "fermer les écoles",
+        "titre": "Fermer les écoles",
         "oui": {
             "pop": 7000,
             "legalite": 50,
@@ -65,7 +65,7 @@
         }
     },
     "event6": {
-        "titre": "baisser le budject des associations",
+        "titre": "Baisser le budget des associations",
         "oui": {
             "pop": 4000,
             "legalite": 50,
@@ -78,7 +78,7 @@
         }
     },
     "event7": {
-        "titre": "voter une loi pour la parite",
+        "titre": "Voter une loi pour la parité",
         "oui": {
             "pop": 170000,
             "legalite": 50,
