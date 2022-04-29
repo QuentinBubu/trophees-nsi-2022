@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "loi",
+        "titre": "faire avancer diférents projets de loi\nmême si vous êtes pas en accord avec?",
         "oui": {
             "pop": 30000,
             "legalite": 50,
@@ -13,7 +13,7 @@
         }
     },
     "event2": {
-        "titre": "arret",
+        "titre": "prendre un arrêter prefectoral pour empêcher\nles voitures dans les grandes villes les week-end",
         "oui": {
             "pop": 30000,
             "legalite": 50,
@@ -26,7 +26,7 @@
         }
     },
     "event3": {
-        "titre": "proces",
+        "titre": "attaquer en justice les grandes firmes",
         "oui": {
             "pop": 3000,
             "legalite": 50,
@@ -39,7 +39,7 @@
         }
     },
     "event4": {
-        "titre": "maltraitance",
+        "titre": "menez une action contre la maltraitence infantile",
         "oui": {
             "pop": 250000,
             "legalite": 50,
@@ -52,7 +52,7 @@
         }
     },
     "event5": {
-        "titre": "ecole",
+        "titre": "réduire l'enveloppe extra-scolaire pour augmenter\ncelle du salaire des employés scolaires",
         "oui": {
             "pop": 7000,
             "legalite": 50,
