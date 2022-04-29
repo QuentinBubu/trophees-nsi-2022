@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "Changer les taxes sur le patrimoines",
+        "titre": "changer les taxes sur le patrimoines",
         "oui": {
             "pop": 65000,
             "legalite": 50,
@@ -52,7 +52,7 @@
         }
     },
     "event5": {
-        "titre": "Verbaliser ceux qui dégradent les lieux",
+        "titre": "verbaliser ceux qui dégradent les lieux",
         "oui": {
             "pop": 54000,
             "legalite": 50,
