@@ -58,4 +58,4 @@ class Popularite:
         if pop >= 4000000000 :                                          #arrivé au grace maximal, président des nations, fin du jeu.
             gestion.set_grade(PRESIDENT_DES_NATIONS)
             return False, FIN_GAGNE
-
+        return True
