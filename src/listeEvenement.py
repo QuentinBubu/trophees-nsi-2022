@@ -24,13 +24,13 @@ class ListeEvenement:
     dict_presidentnation = {}
     
     def __init__(self, grade):                     #Importation des fichiers json pour les dictionnaires des évènements
-        with open('src/utils/events/citoyen.json')         as f: self.dict_citoyen         = load(f)
-        with open('src/utils/events/maire.json')           as f: self.dict_maire           = load(f)
-        with open('src/utils/events/depute.json')          as f: self.dict_depute          = load(f)
-        with open('src/utils/events/depRegion.json')       as f: self.dict_depregion       = load(f)
-        with open('src/utils/events/ministre.json')        as f: self.dict_ministre        = load(f)
-        with open('src/utils/events/president.json')       as f: self.dict_president       = load(f)
-        with open('src/utils/events/presidentNation.json') as f: self.dict_presidentnation = load(f)
+        with open('src/utils/events/citoyen.json',         encoding='utf-8') as f: self.dict_citoyen         = load(f)
+        with open('src/utils/events/maire.json',           encoding='utf-8') as f: self.dict_maire           = load(f)
+        with open('src/utils/events/depute.json',          encoding='utf-8') as f: self.dict_depute          = load(f)
+        with open('src/utils/events/depRegion.json',       encoding='utf-8') as f: self.dict_depregion       = load(f)
+        with open('src/utils/events/ministre.json',        encoding='utf-8') as f: self.dict_ministre        = load(f)
+        with open('src/utils/events/president.json',       encoding='utf-8') as f: self.dict_president       = load(f)
+        with open('src/utils/events/presidentNation.json', encoding='utf-8') as f: self.dict_presidentnation = load(f)
         self.grade = grade
 
 ##########################GETTER ET SETTER###########################
@@ -70,7 +70,7 @@ class ListeEvenement:
         if len(self.dict_depregion) == 0:
             return False, FIN_DICT_VIDE
         event = choice(list(self.dict_depregion.items()))
-        del self.depregion[event[0]]
+        del self.dict_depregion[event[0]]
         return event
 
     def ministre(self):

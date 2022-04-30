@@ -2,12 +2,12 @@
     "event1": {
         "titre": "faire avancer diférents projets de loi\nmême si vous êtes pas en accord avec?",
         "oui": {
-            "pop": 30000,
+            "pop": 500000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 4000,
+            "pop": 750000,
             "legalite": 50,
             "temps": 1
         }
@@ -15,12 +15,12 @@
     "event2": {
         "titre": "prendre un arrêter prefectoral pour empêcher\nles voitures dans les grandes villes les week-end",
         "oui": {
-            "pop": 30000,
+            "pop": 200000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 3000,
+            "pop": 450000,
             "legalite": 50,
             "temps": 1
         }
@@ -28,12 +28,12 @@
     "event3": {
         "titre": "attaquer en justice les grandes firmes",
         "oui": {
-            "pop": 3000,
+            "pop": 350000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 600,
+            "pop": 550000,
             "legalite": 50,
             "temps": 1
         }
@@ -41,12 +41,12 @@
     "event4": {
         "titre": "menez une action contre la maltraitence infantile",
         "oui": {
-            "pop": 250000,
+            "pop": 800000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 500,
+            "pop": -200000,
             "legalite": 50,
             "temps": 1
         }
@@ -54,38 +54,38 @@
     "event5": {
         "titre": "réduire l'enveloppe extra-scolaire pour augmenter\ncelle du salaire des employés scolaires",
         "oui": {
-            "pop": 7000,
+            "pop": 100000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 3000,
+            "pop": 2500000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event6": {
-        "titre": "budjet",
+        "titre": "augmenter le budjet des petites communes",
         "oui": {
-            "pop": 4000,
+            "pop": 450000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 5000,
+            "pop": 200000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event7": {
-        "titre": "parite",
+        "titre": "mener des actions contre la parité",
         "oui": {
-            "pop": 170000,
+            "pop": -500000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 600,
+            "pop": 200000,
             "legalite": 50,
             "temps": 1
         }

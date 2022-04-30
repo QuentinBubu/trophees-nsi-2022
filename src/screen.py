@@ -17,7 +17,7 @@ class Screen:
         Arguments : screen (Pygame) : fenêtre
                     clock (Pygame) : Fréquence (FPS)
                     font (Pygame) : Police d'écriture
-                    font50 (Pygame) : Police d'écriture taille 50
+                    font40 (Pygame) : Police d'écriture taille 50
                     set_caption (Pygame) : Titre de la fenêtre
                     set_fond(Pygame) : Fond de la fenêtre en premier lieu
         """
@@ -29,7 +29,7 @@ class Screen:
         self.clock = pygame.time.Clock()
         self.set_logo('image/logo.png')
         self.font = pygame.font.SysFont('Arial', 30)
-        self.font50 = pygame.font.SysFont('Arial', 50)
+        self.font40 = pygame.font.SysFont('Arial', 40)
         
 ###################GETTER, SETTER, ADD ET REMOVE##################################
 
@@ -98,7 +98,7 @@ class Screen:
         for sprite in self.get_all_sprites():
             self.remove_sprite(sprite)
         self.screen.fill((255,0,0))
-        afficher_text("ERREUR\n" + text + "\nPRESSEZ UNE TOUCHE", self, self.font50, 'ERROR')
+        afficher_text("ERREUR\n" + text + "\nPRESSEZ UNE TOUCHE", self, self.font40, 'ERROR')
         pygame.display.flip()
         stop = False
         while not stop:

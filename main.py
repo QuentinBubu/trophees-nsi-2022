@@ -136,8 +136,8 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             sound[screen.music].actualiser(screen)
             sound[screen.music].set_clicked(False)
             # Et on remplace par les nouvelles infos
-            afficher_text(g.grade.capitalize(), screen, screen.font50, GRADE, (0.12, 0.055))
-            afficher_text(evenement[1]['titre'], screen, screen.font, EVENT)
+            afficher_text(g.grade.capitalize(), screen, screen.font40, GRADE, (0.12, 0.055))
+            afficher_text(evenement[1]['titre'], screen, screen.font, EVENT, (0.5, 0.5), True, NOIR)
             afficher_text(g.jauges.temps.get_date(), screen, screen.font, DATE, (0.12, 0.17))
             jauge_leg.remplissage(g.jauges.legalite.get_leg(),100)
             jauge_jus.remplissage(g.jauges.justice.get_jus(), 100)

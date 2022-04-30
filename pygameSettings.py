@@ -50,7 +50,7 @@ def pourcentage(gauche:int, haut:int, parent:pygame.Surface, element:pygame.Surf
             (haut * screen_taille[1]) + ((el_taille[1]) / 2) - nb_el / 2 * el_taille[1] - (INTERLIGNE * sum([i for i in range(nb_el - 1)]) / 2) / 2
         )
 
-def afficher_text(text, screen, font, nom, position = (0.5, 0.5), antialias = True, color = BLANC, background = None, alpha = 255):
+def afficher_text(text:str, screen, font:str, nom:str, position:tuple = (0.5, 0.5), antialias:bool = True, color:tuple = BLANC, background:tuple = None, alpha:int = 255):
     """Affiche proprement un texte sur l'écran
 
     Args:
@@ -60,8 +60,8 @@ def afficher_text(text, screen, font, nom, position = (0.5, 0.5), antialias = Tr
         nom (str): nom
         position (tuple, optionel): Postion sur la fenêtre. Par défaut (0.5, 0.5).
         antialias (bool, optionel): _description_. Par défaut True.
-        color (str, optionel): couleur du texte. Par défaut BLANC.
-        background (______________, optionel): arrière plan. Par défaut None.
+        color (tuple, optionel): couleur du texte. Par défaut BLANC.
+        background (tuple, optionel): arrière plan. Par défaut None.
         alpha (int, optionel): couleur invisible. Par défaut 255.
 
     Returns:
