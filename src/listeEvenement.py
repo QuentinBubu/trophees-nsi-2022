@@ -1,7 +1,7 @@
 from json import load
 from random import choice
 
-from src.utils.constante import CITOYEN, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT, PRESIDENT_DES_NATIONS
+from src.utils.constante import CITOYEN, FIN_DICT_VIDE, MAIRE, DEPUTE, DEPUTE_REGIONAL, MINISTRE, PRESIDENT
 
 class ListeEvenement:
     """Liste de tous les évènements du jeu
@@ -13,7 +13,6 @@ class ListeEvenement:
     dict_depregion (dict) : évènements concernant le grade député régional
     dict_ministre (dict) : évènements concernant le grade ministre
     dict_president (dict) : évènements concernant le grade president
-    dict_presidentnation (dict) : ___________________________
     """
     dict_citoyen         = {}
     dict_maire           = {}
@@ -21,7 +20,6 @@ class ListeEvenement:
     dict_depregion       = {}
     dict_ministre        = {}
     dict_president       = {}
-    dict_presidentnation = {}
     
     def __init__(self, grade):                     #Importation des fichiers json pour les dictionnaires des évènements
         with open('src/utils/events/citoyen.json',         encoding='utf-8') as f: self.dict_citoyen         = load(f)
@@ -30,7 +28,6 @@ class ListeEvenement:
         with open('src/utils/events/depRegion.json',       encoding='utf-8') as f: self.dict_depregion       = load(f)
         with open('src/utils/events/ministre.json',        encoding='utf-8') as f: self.dict_ministre        = load(f)
         with open('src/utils/events/president.json',       encoding='utf-8') as f: self.dict_president       = load(f)
-        with open('src/utils/events/presidentNation.json', encoding='utf-8') as f: self.dict_presidentnation = load(f)
         self.grade = grade
 
 ##########################GETTER ET SETTER###########################
@@ -86,13 +83,6 @@ class ListeEvenement:
         event = choice(list(self.dict_president.items()))
         del self.dict_president[event[0]]
         return event
-        
-    def presidentnation(self):
-        if len(self.dict_presidentnation) == 0:
-            return False, FIN_DICT_VIDE
-        event = choice(list(self.dict_presidentnation.items()))
-        del self.dict_presidentnation[event[0]]
-        return event
 
 ##########################################################################################
 
@@ -117,8 +107,6 @@ class ListeEvenement:
             event = self.ministre()
         elif grade == PRESIDENT:
             event = self.president()
-        elif grade == PRESIDENT_DES_NATIONS:
-            event = self.presidentnation()
         else:
             return False, 'Grade inconnu'
         return event
