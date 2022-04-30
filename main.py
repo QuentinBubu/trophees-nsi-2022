@@ -6,8 +6,8 @@ from time import sleep
 from jauges_graphiques import Jauges_graphique
 from src.screen import Screen
 from src.gestion import Gestion
-from src.utils.texts import T_FIN_DICT_VIDE, T_FIN_PRISON, T_FIN_TEMPS, T_PROLOGUE
-from src.utils.constante import FIN, FIN_DICT_VIDE, FIN_PRISON, FIN_TEMPS, GRADE, EVENT, DATE, NOIR, ROUGE
+from src.utils.texts import T_FIN_DICT_VIDE, T_FIN_GAGNE, T_FIN_PRISON, T_FIN_TEMPS, T_PROLOGUE
+from src.utils.constante import FIN, FIN_DICT_VIDE, FIN_GAGNE, FIN_PRISON, FIN_TEMPS, GRADE, EVENT, DATE, NOIR, ROUGE
 from pygameSettings import *
 from src.bouton import *
 
@@ -107,6 +107,10 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
                                 elif evenement[1] == FIN_PRISON:
                                     screen.set_fond('image/justice_out.webp')
                                     arret = (True, T_FIN_PRISON, (0.3, 0.2), ROUGE)
+                                    bouton.set_clicked(False)
+                                elif evenement[1] == FIN_GAGNE:
+                                    screen.set_fond('image/fin_gagne.jpg')
+                                    arret = (True, T_FIN_GAGNE, (0.3, 0.2), BLANC)
                                     bouton.set_clicked(False)
                     for bouton in sound:
                         if bouton.is_clicked() and not arret:
