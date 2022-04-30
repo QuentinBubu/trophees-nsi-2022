@@ -33,8 +33,8 @@ interragibles = [
 ]
 
 sound = [
-    Bouton(pourcentage(0.95, 0.9, screen), (64, 64), "image/mute.png", "image/mute.png", screen.play_music),
-    Bouton(pourcentage(0.95, 0.9, screen), (64, 64), "image/sound.png", "image/sound.png", screen.stop_music)
+    Bouton(pourcentage(0.95, 0.9, screen), (64, 64), "image/mute.png", "image/mute.png", g.play_music),
+    Bouton(pourcentage(0.95, 0.9, screen), (64, 64), "image/sound.png", "image/sound.png", g.stop_music)
 ]
 
 ################################################################################
@@ -51,7 +51,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
         sleep(2) # temps de faux chargement
         screen.set_fond('image/temp_debut.jpg')
         ecran = screen.PROLOGUE
-        screen.play_music()
+        g.play_music()
         sound[1].actualiser(screen)
         sound[0].set_pos(pourcentage(0.95, 0.9, screen))
         sound[1].set_pos(pourcentage(0.95, 0.9, screen))
@@ -59,6 +59,8 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
     for event in pygame.event.get():                #Boucle qui va vérifier les actions du joueur (clique, clavier...)
         if event.type == pygame.QUIT:               #le joueur quitte le jeu
             ouvert = False
+        if event.type == g.MUSIC_END:
+            g.play_music()
         if event.type == pygame.VIDEORESIZE:        #Le joueur redimensionne la fenêtre, donc il faut tout remettre à la bonne taille
             screen.remove_on_screen(screen.PROLOGUE)
             screen.remove_on_screen(EVENT)
@@ -68,7 +70,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             screen.set_fond()
             interragibles[0].set_pos(pourcentage(0.225, 0.79, screen))
             interragibles[1].set_pos(pourcentage(0.725, 0.8, screen))
-            sound[screen.music].set_pos(pourcentage(0.95, 0.9, screen))
+            sound[g.music].set_pos(pourcentage(0.95, 0.9, screen))
             jauge_leg.set_pos((pourcentage(0.3 ,0.05 ,screen)))
             jauge_jus.set_pos((pourcentage(0.525, 0.05 , screen)))
             jauge_pop.set_pos((pourcentage(0.75, 0.05, screen)))
@@ -137,8 +139,8 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             for i in interragibles: # Ajout des boutons oui/non
                 i.actualiser(screen)
                 i.set_clicked(False)
-            sound[screen.music].actualiser(screen)
-            sound[screen.music].set_clicked(False)
+            sound[g.music].actualiser(screen)
+            sound[g.music].set_clicked(False)
             # Et on remplace par les nouvelles infos
             afficher_text(g.grade.capitalize(), screen, screen.font40, GRADE, (0.12, 0.055))
             afficher_text(evenement[1]['titre'], screen, screen.font, EVENT, (0.5, 0.5), True, NOIR)

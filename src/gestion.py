@@ -1,3 +1,5 @@
+import pygame
+from random import choice
 from src.popularite import Popularite
 from src.gestionJauges import GestionJauges
 from src.listeEvenement import ListeEvenement
@@ -30,6 +32,17 @@ class Gestion:
         MINISTRE       : 'ministre',
         PRESIDENT      : 'president'
     }
+    
+    music_list = [
+        'MonplaisirS1L24.mp3',
+        'The_Bards_Tale.mp3',
+        'Monplaisir_-_06_-_Juillet.mp3',
+        'Monplaisir_-_01_-_Hlice.mp3',
+        'Komiku_-_01_-_Balance.mp3',
+        'Brendan_Kinsella_-_01_-_Bach_-_Aria_Variata_BWV_989_Variation_no1.mp3'
+    ]
+    
+    MUSIC_END = pygame.USEREVENT+1
 
 #######################GETTER ET SETTER##############################
 
@@ -92,3 +105,14 @@ class Gestion:
             return 4000000000
         if self.get_grade() == PRESIDENT_DES_NATIONS :
             return Popularite.get_pop()
+
+    def play_music(self):
+        rChoix = choice(self.music_list)
+        pygame.mixer.music.set_endevent(self.MUSIC_END)
+        pygame.mixer.music.load(__file__[:-14] + '/sound/' + rChoix)
+        pygame.mixer.music.play()
+        self.music = 1
+    
+    def stop_music(self):
+        pygame.mixer.music.stop()
+        self.music = 0
