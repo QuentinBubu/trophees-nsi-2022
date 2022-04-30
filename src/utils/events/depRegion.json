@@ -89,5 +89,31 @@
             "legalite": 50,
             "temps": 1
         }
+    },
+    "event8": {
+        "titre": "acheter de la drogue avec un but précis",
+        "oui": {
+            "pop": 450050,
+            "legalite": 50,
+            "temps": 4
+        },
+        "non": {
+            "pop": 671428,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event9": {
+        "titre": "créé une association sous couverture afin de récupérer l'argent pour soi",
+        "oui": {
+            "pop": 450050,
+            "legalite": 50,
+            "temps": 4
+        },
+        "non": {
+            "pop": 671428,
+            "legalite": 50,
+            "temps": 1
+        }
     }
 }

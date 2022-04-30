@@ -180,5 +180,18 @@
             "legalite": 50,
             "temps": 1
         }
+    },
+    "event15": {
+        "titre": "couvrir un policier ripoux",
+        "oui": {
+            "pop": 3964285714,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 3457864,
+            "legalite": 50,
+            "temps": 1
+        }
     }
 }
