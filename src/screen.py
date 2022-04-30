@@ -112,7 +112,7 @@ class Screen:
         return False
 
     def play_music(self):
-        pygame.mixer.music.load(__file__[::14] + '/../sound/MonplaisirS1L24.mp3')
+        pygame.mixer.music.load(__file__[:-14] + '/sound/MonplaisirS1L24.mp3')
         pygame.mixer.music.play(-1)
         self.music = 1
     
