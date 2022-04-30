@@ -56,7 +56,7 @@
         "oui": {
             "pop": 5000000,
             "legalite": 50,
-            "temps": 1
+            "temps": 4
         },
         "non": {
             "pop": 15748965,

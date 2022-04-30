@@ -9,7 +9,7 @@ class Temps:
         date_ig (str) : date dans le jeu
         ajout (int) : __________________
     """
-    LIMITE = 120
+    LIMITE = 55
     actuel = Date.get_date()
     date_ig = "00/00"
     ajout = 0
