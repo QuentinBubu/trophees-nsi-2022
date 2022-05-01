@@ -1,12 +1,16 @@
 from random import randint
-from src.jauge import Jauge
 from src.utils.affichage import Affichage
 
 #Justice hérite de Jauge
 
-class Justice(Jauge):
+class Justice:
 
     def __init__(self, justice: float = 0) -> None:
+        """Jauge de la justice
+
+        Args:
+            justice (float, optionel): pourcentage de chance d'être détécté comme malhonnête aux yeux de la justice. Par défaut 0.
+        """
         super().__init__()
         self.justice = 0
 
