@@ -5,8 +5,7 @@ Des jauges graphiques du type :
     ---------------------
     |######             |
     ---------------------
-     Population
-
+     Popularité
 """
 
 import pygame
@@ -86,7 +85,7 @@ class Jauges_graphique:
         if self.set_show_pourcentage:
             """Affichage du pourcentage sur l'écran
             """
-            text = self.font.render(self.description+" "+str(int(self.pourcentage*100))+"%", False, "black")
+            text = self.font.render(self.description+" "+str(int(self.pourcentage*100))+"%", False, "white")
         else :
             text = self.font.render(self.description, False, "black")
 

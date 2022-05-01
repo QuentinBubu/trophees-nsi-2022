@@ -7,7 +7,7 @@ from jauges_graphiques import Jauges_graphique
 from src.screen import Screen
 from src.gestion import Gestion
 from src.utils.texts import T_FIN_DICT_VIDE, T_FIN_GAGNE, T_FIN_PRISON, T_FIN_TEMPS, T_PROLOGUE
-from src.utils.constante import FIN, FIN_DICT_VIDE, FIN_GAGNE, FIN_PRISON, FIN_TEMPS, GRADE, EVENT, DATE, NOIR, ROUGE
+from src.utils.constante import FIN, FIN_DICT_VIDE, FIN_GAGNE, FIN_PRISON, FIN_TEMPS, GRADE, EVENT, DATE, NOIR, ROUGE, PRESIDENT, CITOYEN
 from pygameSettings import *
 from src.bouton import *
 
@@ -141,7 +141,10 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             sound[screen.music].set_clicked(False)
             # Et on remplace par les nouvelles infos
             afficher_text(g.grade.capitalize(), screen, screen.font40, GRADE, (0.12, 0.055))
-            afficher_text(evenement[1]['titre'], screen, screen.font, EVENT, (0.5, 0.5), True, NOIR)
+            if g.get_grade() == PRESIDENT or g.get_grade() == CITOYEN :
+                afficher_text(evenement[1]['titre'], screen, screen.font, EVENT, (0.5, 0.5), True, NOIR)
+            else :
+                afficher_text(evenement[1]['titre'], screen, screen.font, EVENT, (0.5, 0.5), True, BLANC)
             afficher_text(g.jauges.temps.get_date(), screen, screen.font, DATE, (0.12, 0.17))
             jauge_leg.remplissage(g.jauges.legalite.get_leg(),100)
             jauge_jus.remplissage(g.jauges.justice.get_jus(), 100)
