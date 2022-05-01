@@ -1,0 +1,93 @@
+{
+    "event1": {
+        "titre": "Faire avancer diférents projets de loi\nmême si vous êtes pas en accord avec?",
+        "oui": {
+            "pop": 500000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 750000,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event2": {
+        "titre": "Prendre un arrêter prefectoral pour empêcher\nles voitures dans les grandes villes les week-end",
+        "oui": {
+            "pop": 200000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 450000,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event3": {
+        "titre": "Attaquer en justice les grandes firmes",
+        "oui": {
+            "pop": 350000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 550000,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event4": {
+        "titre": "Mener une action contre la maltraitence infantile",
+        "oui": {
+            "pop": 800000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": -200000,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event5": {
+        "titre": "Réduire l'enveloppe extra-scolaire pour augmenter\ncelle du salaire des employés scolaires",
+        "oui": {
+            "pop": 100000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 2500000,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event6": {
+        "titre": "Augmenter le budjet des petites communes",
+        "oui": {
+            "pop": 450000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 200000,
+            "legalite": 50,
+            "temps": 1
+        }
+    },
+    "event7": {
+        "titre": "Mener des actions CONTRE la parité",
+        "oui": {
+            "pop": -500000,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 200000,
+            "legalite": 50,
+            "temps": 1
+        }
+    }
+}
