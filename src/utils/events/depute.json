@@ -78,7 +78,7 @@
         }
     },
     "event7": {
-        "titre": "Mener des actions CONTRE la parité",
+        "titre": "Mener des actions contre la parité",
         "oui": {
             "pop": -500000,
             "legalite": 50,
