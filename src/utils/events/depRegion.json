@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "confiner",
+        "titre": "lancer des nouvelles restictions local\nen rapport à la crise actuelle",
         "oui": {
             "pop": 350500,
             "legalite": 50,
@@ -13,7 +13,7 @@
         }
     },
     "event2": {
-        "titre": "plastique",
+        "titre": "mener une action coup de point contre\nla surconsomation de plastic",
         "oui": {
             "pop": 350000,
             "legalite": 50,
@@ -26,7 +26,7 @@
         }
     },
     "event3": {
-        "titre": "musee",
+        "titre": "augmaneter la publicitée pour inciter les habitants à aller aux musées",
         "oui": {
             "pop": 671428,
             "legalite": 50,
@@ -39,7 +39,7 @@
         }
     },
     "event4": {
-        "titre": "travail",
+        "titre": "mener une action contre le travail dissimulé",
         "oui": {
             "pop": 750000,
             "legalite": 50,
@@ -52,7 +52,7 @@
         }
     },
     "event5": {
-        "titre": "argent",
+        "titre": "débloquer des fonds publics pour des actions indéterminés",
         "oui": {
             "pop": 671428,
             "legalite": 50,
@@ -65,7 +65,7 @@
         }
     },
     "event6": {
-        "titre": "animaux",
+        "titre": "faire une campagne de pub contre l'abandon animalier",
         "oui": {
             "pop": 4700400,
             "legalite": 50,
@@ -104,7 +104,7 @@
         }
     },
     "event9": {
-        "titre": "créé une association sous couverture afin de récupérer l'argent pour soi",
+        "titre": "créé une association sous couverture afin de récupérer\nl'argent pour soi et de s'assurer un confort",
         "oui": {
             "pop": 450050,
             "legalite": 50,
