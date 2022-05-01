@@ -1,10 +1,13 @@
-from src.jauge import Jauge
-
 #Legalite qui hérite de Jauge
 
-class Legalite(Jauge):
+class Legalite:
 
     def __init__(self, legalite : float = 100) -> None:
+        """Jauge de la Légalité
+
+        Args:
+            legalite (float, optionel): Fonctionne en pourcentage, niveau de votre légalité. Par défaut à 100.
+        """
         super().__init__()
         self.legalite = 100
 
