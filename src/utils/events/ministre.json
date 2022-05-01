@@ -89,5 +89,18 @@
             "legalite": 50,
             "temps": 1
         }
+    },
+    "event8": {
+        "titre": "condamner des personnes qui non rien fait",
+        "oui": {
+            "pop": 2645713,
+            "legalite": 50,
+            "temps": 1
+        },
+        "non": {
+            "pop": 5000000,
+            "legalite": 50,
+            "temps": 1
+        }
     }
 }
