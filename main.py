@@ -94,6 +94,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
                     for bouton in interragibles:
                         # Du fait que le bouton est laché, il ne peut pas y avoir de bouton clické
                         if bouton.is_clicked() and not arret:
+                            screen.remove_on_screen("vv")
                             screen.remove_on_screen(EVENT)
                             screen.remove_on_screen(GRADE)
                             choix = bouton.click()
@@ -145,8 +146,10 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             # Et on remplace par les nouvelles infos
             afficher_text(g.grade.capitalize(), screen, screen.font40, GRADE, (0.12, 0.055))
             if g.get_grade() == PRESIDENT or g.get_grade() == CITOYEN :
+                afficher_text("Voulez-vous", screen, screen.font40, "vv", (0.5, 0.35), True, NOIR)
                 afficher_text(evenement[1]['titre'], screen, screen.font, EVENT, (0.5, 0.5), True, NOIR)
             else :
+                afficher_text("Voulez-vous", screen, screen.font40, "vv", (0.5, 0.35), True, BLANC)
                 afficher_text(evenement[1]['titre'], screen, screen.font, EVENT, (0.5, 0.5), True, BLANC)
             afficher_text(g.jauges.temps.get_date(), screen, screen.font, DATE, (0.12, 0.17))
             jauge_leg.remplissage(g.jauges.legalite.get_leg(),100)
