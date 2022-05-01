@@ -65,7 +65,7 @@
         }
     },
     "event6": {
-        "titre": "organiser une fête",
+        "titre": "Organiser une fête",
         "oui": {
             "pop": 1000,
             "legalite": 50,
@@ -78,7 +78,7 @@
         }
     },
     "event7": {
-        "titre": "être accompagnateur d'une ou plusieurs sorties scolaire",
+        "titre": "Etre accompagnateur d'une ou plusieurs sorties scolaire",
         "oui": {
             "pop": 5000,
             "legalite": 50,
