@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "marcial",
+        "titre": "Mettre en place la loi Marcial",
         "oui": {
             "pop": 3964285714,
             "legalite": 50,
@@ -13,7 +13,7 @@
         }
     },
     "event2": {
-        "titre": "invasion",
+        "titre": "Prévenir d'une invasion",
         "oui": {
             "pop": 2596846754,
             "legalite": 50,
@@ -26,7 +26,7 @@
         }
     },
     "event3": {
-        "titre": "autre",
+        "titre": "Alléger de nouveaux les prisons",
         "oui": {
             "pop": 3964285714,
             "legalite": 50,
@@ -39,7 +39,7 @@
         }
     },
     "event4": {
-        "titre": "virus",
+        "titre": "Lancer des recherche pour un vaccin contre un virus mortel",
         "oui": {
             "pop": 3964285714,
             "legalite": 50,
@@ -52,7 +52,7 @@
         }
     },
     "event5": {
-        "titre": "survivant",
+        "titre": "Lancer opération survivant",
         "oui": {
             "pop": 3964285714,
             "legalite": 50,
@@ -65,7 +65,7 @@
         }
     },
     "event6": {
-        "titre": "espace",
+        "titre": "Lancer une mission dans l'espace",
         "oui": {
             "pop": 13467864,
             "legalite": 50,
@@ -78,7 +78,7 @@
         }
     },
     "event7": {
-        "titre": "bombe",
+        "titre": "Lancer une bombe atomique",
         "oui": {
             "pop": 3964285714,
             "legalite": 50,

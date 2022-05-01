@@ -1,6 +1,6 @@
 {
     "event1": {
-        "titre": "egalite",
+        "titre": "Voter la loi pour l'égaliter Homme, Femme",
         "oui": {
             "pop": 17654854,
             "legalite": 50,
@@ -13,7 +13,7 @@
         }
     },
     "event2": {
-        "titre": "vacances",
+        "titre": "Enlever les vacances d'avril",
         "oui": {
             "pop": 5000000,
             "legalite": 50,
@@ -26,7 +26,7 @@
         }
     },
     "event3": {
-        "titre": "villa",
+        "titre": "Voler l'argent de l'état",
         "oui": {
             "pop": 5000000,
             "legalite": 50,
@@ -39,7 +39,7 @@
         }
     },
     "event4": {
-        "titre": "detenus",
+        "titre": "Alléger les prisons",
         "oui": {
             "pop": 5000000,
             "legalite": 50,
@@ -52,7 +52,7 @@
         }
     },
     "event5": {
-        "titre": "avortement",
+        "titre": "Voter la loi contre l'avortement",
         "oui": {
             "pop": 5000000,
             "legalite": 50,
@@ -65,7 +65,7 @@
         }
     },
     "event6": {
-        "titre": "victimes",
+        "titre": "Aidé les victimes d'une catastrophe naturel",
         "oui": {
             "pop": 13999000,
             "legalite": 50,
@@ -78,7 +78,7 @@
         }
     },
     "event7": {
-        "titre": "reforme",
+        "titre": "Nouvelle réforme scolaire",
         "oui": {
             "pop": 2645713,
             "legalite": 50,
