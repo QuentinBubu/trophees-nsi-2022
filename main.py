@@ -53,13 +53,11 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
         ecran = screen.PROLOGUE
         g.play_music()
         sound[1].actualiser(screen)
-        sound[0].set_pos(pourcentage(0.95, 0.9, screen))
-        sound[1].set_pos(pourcentage(0.95, 0.9, screen))
 
     for event in pygame.event.get():                #Boucle qui va vérifier les actions du joueur (clique, clavier...)
         if event.type == pygame.QUIT:               #le joueur quitte le jeu
             ouvert = False
-        if event.type == g.MUSIC_END:
+        if event.type == g.MUSIC_END and g.get_music_status() == 1:
             g.play_music()
         if event.type == pygame.VIDEORESIZE:        #Le joueur redimensionne la fenêtre, donc il faut tout remettre à la bonne taille
             screen.remove_on_screen(screen.PROLOGUE)
@@ -114,9 +112,12 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
                                     screen.set_fond('image/fin_gagne.jpg')
                                     arret = (True, T_FIN_GAGNE, (0.3, 0.2), BLANC)
                                     bouton.set_clicked(False)
-                    for bouton in sound:
-                        if bouton.is_clicked() and not arret:
-                            bouton.click()
+                    if (sound[0].is_clicked() or sound[1].is_clicked()) and not arret:
+                        if g.get_music_status() == 0:
+                            sound[0].click()
+                        else:
+                            sound[1].click()
+                        for bouton in sound:
                             bouton.set_clicked(False)
 
     if ecran == screen.PROLOGUE:                        #Ecran de prologue

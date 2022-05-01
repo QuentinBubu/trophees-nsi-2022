@@ -116,3 +116,6 @@ class Gestion:
     def stop_music(self):
         pygame.mixer.music.stop()
         self.music = 0
+        
+    def get_music_status(self) -> bool:
+        return self.music
