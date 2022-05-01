@@ -120,7 +120,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
                             bouton.set_clicked(False)
 
     if ecran == screen.PROLOGUE:                        #Ecran de prologue
-        afficher_text(T_PROLOGUE, screen, screen.font, screen.PROLOGUE, (0.5, 0.5), True, BLANC)
+        afficher_text(T_PROLOGUE, screen, screen.font, screen.PROLOGUE, (0.5, 0.5), True, NOIR)
 
     elif ecran == screen.MAIN: # en attente de réponse
 
