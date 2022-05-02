@@ -7,7 +7,7 @@
             "temps": 1
         },
         "non": {
-            "pop": -30,
+            "pop": -500,
             "legalite": 3,
             "temps": 1
         }
@@ -15,12 +15,12 @@
     "event2": {
         "titre": "Demander la mise en place de l'aide à la personne\npour faire leur courses (sans conditions d'accès)",
         "oui": {
-            "pop": 300,
+            "pop": 5000,
             "legalite": 3,
             "temps": 1
         },
         "non": {
-            "pop": 330,
+            "pop": 3500,
             "legalite": 3,
             "temps": 1
         }
@@ -41,12 +41,12 @@
     "event4": {
         "titre": "Travailler bénévolement dans une association à but lucratif\n(On ne sait pas avec qui cette association a des liens)",
         "oui": {
-            "pop": 130,
+            "pop": 1500,
             "legalite": 3,
             "temps": 1
         },
         "non": {
-            "pop": 230,
+            "pop": 2500,
             "legalite": -10,
             "temps": 1
         }
@@ -59,7 +59,7 @@
             "temps": 1
         },
         "non": {
-            "pop": 230,
+            "pop": 2500,
             "legalite": 3,
             "temps": 1
         }
@@ -80,7 +80,7 @@
     "event7": {
         "titre": "Etre accompagnateur d'une ou plusieurs sorties scolaire",
         "oui": {
-            "pop": 300,
+            "pop": 5000,
             "legalite": 3,
             "temps": 1
         },
