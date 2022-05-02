@@ -29,7 +29,7 @@
         "titre": "Développer divers salon, bar, commerce de votre ville\n(Vous serez potentiellement indirectement responsable\ndes activités dans ces centres d'intêret)",
         "oui": {
             "pop": 45000,
-            "legalite": -8,
+            "legalite": -10,
             "temps": 1
         },
         "non": {

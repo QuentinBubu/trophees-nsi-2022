@@ -1,4 +1,5 @@
 from random import randint
+from src.utils.constante import FIN_PRISON
 
 #Justice hérite de Jauge
 
@@ -46,23 +47,24 @@ class Justice:
         else :
             return self.justice
 
-    def chance_de_detection(self):
+    def chance_de_detection(self, legal):
         """Fonction qui gère la propabilité d'être detécté par la justice
         NB : si la jauge justice est à 50%, cela ne veut pas dire que vous avez 1 chance / 2 d'être detécté(e), c'est un indiquateur qui plus il est élevé a de chance de vous envoyer en procès et d'aller en prison"""
         just = self.get_jus()
         if just >= 50 :                             #si la jauge de détéction par la justice passe au dessus de 50% :
-            if randint((just*0.1),20)== 20 :        #le joueur à selon son pourcentage entre 1 chance sur 20 d'être détécté ou 1 chance sur 4.
-                return False                        #fin du jeu
-        if just < 50 :
-            self.add_jus(-1)
+            if randint(round(just/100, 0), 10)==5 :           #le joueur à selon son pourcentage une chance plus ou moins forte de se faire détécter.
+                return True                                   #fin du jeu
+        if legal < 50 :
+            self.add_jus(-5)
 
     def lien_justice_legalite(self, legalite:object) -> bool:
         """Cette fonction fait le lien entre la jauge de justice et de legalité
         plus on est dans l'illégalité, plus on a de chance d'être detécté par la justice et aller en prison"""
         legal = legalite.get_leg()
-        self.chance_de_detection()
+        if self.chance_de_detection(legal) :
+            return False
         if legal < 50 :             
-            self.add_jus(randint(2, legal-48)//4)    #Si le joueur a un pourcentage de légalité inférieur à 50, à chaques tour la jauge "justice" augmente petit à petit
-        if legal > 50 :                              #Si le joueur a un pourcentage de légalité supérieur à 50, son pourcentage de chance d'être détécté par la justice est mis à 10
+            self.add_jus(randint(2, 52-legal))         #Si le joueur a un pourcentage de légalité inférieur à 50, à chaques tour la jauge "justice" augmente petit à petit
+        if legal > 50 :                                #Si le joueur a un pourcentage de légalité supérieur à 50, son pourcentage de chance d'être détécté par la justice est mis à 10
             self.set_jus(10)
         return True

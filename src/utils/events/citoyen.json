@@ -3,7 +3,7 @@
         "titre": "Faire des demandes pour des passages\nplus réguliers des éboueurs",
         "oui": {
             "pop": 2000,
-            "legalite": 3,
+            "legalite": -75,
             "temps": 1
         },
         "non": {

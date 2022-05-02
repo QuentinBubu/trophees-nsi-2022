@@ -55,7 +55,7 @@
         "titre": "débloquer des fonds publics pour des actions indéterminés",
         "oui": {
             "pop": -5000000,
-            "legalite": -30,
+            "legalite": -33,
             "temps": 1
         },
         "non": {
@@ -94,7 +94,7 @@
         "titre": "acheter de la drogue avec un but précis",
         "oui": {
             "pop": 1000000,
-            "legalite": -20,
+            "legalite": -25,
             "temps": 4
         },
         "non": {
