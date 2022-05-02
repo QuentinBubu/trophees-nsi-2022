@@ -25,12 +25,13 @@ class Gestion:
     fond = False
     
     img_corr = {
-        CITOYEN        : 'citoyen',
-        MAIRE          : 'maire',
-        DEPUTE         : 'depute',
-        DEPUTE_REGIONAL: 'depRegion',
-        MINISTRE       : 'ministre',
-        PRESIDENT      : 'president'
+        CITOYEN               : 'citoyen',
+        MAIRE                 : 'maire',
+        DEPUTE                : 'depute',
+        DEPUTE_REGIONAL       : 'depRegion',
+        MINISTRE              : 'ministre',
+        PRESIDENT             : 'president',
+        PRESIDENT_DES_NATIONS : 'fin_gagne'
     }
     
     music_list = [
