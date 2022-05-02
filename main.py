@@ -79,7 +79,7 @@ while ouvert:               #Boucle qui garde la fenêtre ouverte
             # click gauche :
             if event.button == 1:
                 for bouton in interragibles and sound:
-                    # Si le bouton est clické, alors sont état est clické
+                    # Si le bouton est clické, alors son état est clické
                     bouton.set_clicked(bouton.is_clicked())
 
 

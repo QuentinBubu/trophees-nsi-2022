@@ -3,12 +3,12 @@
         "titre": "peine",
         "oui": {
             "pop": 300000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 160475284,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -16,12 +16,12 @@
         "titre": "attaque",
         "oui": {
             "pop": 300000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 100010200,
-            "legalite": 50,
+            "legalite": -15,
             "temps": 1
         }
     },
@@ -29,12 +29,12 @@
         "titre": "routes",
         "oui": {
             "pop": 30000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 4
         },
         "non": {
             "pop": 87676450,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -42,12 +42,12 @@
         "titre": "frontiere",
         "oui": {
             "pop": 30000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 2
         },
         "non": {
             "pop": 98550050,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -55,12 +55,12 @@
         "titre": "vaccin",
         "oui": {
             "pop": 158309206,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 4
         },
         "non": {
             "pop": 30000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -68,12 +68,12 @@
         "titre": "purge",
         "oui": {
             "pop": 30000000,
-            "legalite": 50,
+            "legalite": -30,
             "temps": 1
         },
         "non": {
             "pop": 76467889,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -81,12 +81,12 @@
         "titre": "retraite",
         "oui": {
             "pop": 30000000,
-            "legalite": 50,
+            "legalite": 0,
             "temps": 4
         },
         "non": {
             "pop": 66467889,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -94,12 +94,12 @@
         "titre": "marcial",
         "oui": {
             "pop": 3964285714,
-            "legalite": 50,
+            "legalite": 0,
             "temps": 1
         },
         "non": {
             "pop": 98555674,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -107,12 +107,12 @@
         "titre": "invasion",
         "oui": {
             "pop": 2596846754,
-            "legalite": 50,
+            "legalite": -15,
             "temps": 4
         },
         "non": {
             "pop": 3964285714,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -120,12 +120,12 @@
         "titre": "autre",
         "oui": {
             "pop": 3964285714,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 44846754,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -133,12 +133,12 @@
         "titre": "virus",
         "oui": {
             "pop": 3964285714,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 61942304,
-            "legalite": 50,
+            "legalite": 0,
             "temps": 1
         }
     },
@@ -146,12 +146,12 @@
         "titre": "survivant",
         "oui": {
             "pop": 3964285714,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 44850250,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -159,12 +159,12 @@
         "titre": "espace",
         "oui": {
             "pop": 13467864,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 3964285714,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -172,25 +172,25 @@
         "titre": "bombe",
         "oui": {
             "pop": 3964285714,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 3457864,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
     "event15": {
-        "titre": "couvrir un policier ripoux",
+        "titre": "couvrir un policier corrompu",
         "oui": {
             "pop": 3964285714,
-            "legalite": 50,
+            "legalite": -15,
             "temps": 1
         },
         "non": {
             "pop": 3457864,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     }
