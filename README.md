@@ -6,7 +6,7 @@
 
 ## Head Of States vous avez dit?
 
-Head Of States est un jeu de gestion où vous avez avoir l'occastion de faire une entrée politique. Vous citoyes, citoyennes, vous aller pouvoir prendre décision pour votre pays et monter sur divers grades.
+Head Of States est un jeu de gestion où vous avez avoir l'occastion de faire une entrée politique. Vous citoyens, citoyennes, vous aller pouvoir prendre décision pour votre pays et monter sur divers grades.
 
 Attention! Vous ne pouvez pas faire n'importe quoi! Divers paramètres sont égalements derrière vous, ce n'est pas moins de 4 fins différentes qui vos sont proposées!
 
