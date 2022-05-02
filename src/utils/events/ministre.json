@@ -1,99 +1,99 @@
 {
     "event1": {
-        "titre": "egalite",
+        "titre": "développer les actions contre les entreprises pour\nla paritée homme-femme, quitte à se les mettre à dos",
         "oui": {
-            "pop": 17654854,
+            "pop": 40000000,
             "legalite": 50,
             "temps": 4
         },
         "non": {
-            "pop": 5000000,
+            "pop": 20000000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event2": {
-        "titre": "vacances",
+        "titre": "augmenter le temps de vacances scolaire",
         "oui": {
-            "pop": 5000000,
+            "pop": 30000000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 4945945,
+            "pop": 1000000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event3": {
-        "titre": "villa",
+        "titre": "développer l'évasion fiscale",
         "oui": {
-            "pop": 5000000,
+            "pop": 20000000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 4845945,
+            "pop": 50000000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event4": {
-        "titre": "detenus",
+        "titre": "réduire le nombre de personne en prison en accordant plus d'allégement",
         "oui": {
-            "pop": 5000000,
+            "pop": 20000000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 7400500,
+            "pop": 10000000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event5": {
-        "titre": "avortement",
+        "titre": "mener une action internationnal pour l'avortement sans certitude de résultat",
         "oui": {
-            "pop": 5000000,
+            "pop": 40000000,
             "legalite": 50,
             "temps": 4
         },
         "non": {
-            "pop": 15748965,
+            "pop": 20000000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event6": {
-        "titre": "victimes",
+        "titre": "développer l'aide aux victimes quittes à se tromper",
         "oui": {
-            "pop": 13999000,
+            "pop": -10000000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 5000000,
+            "pop": 10000000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event7": {
-        "titre": "reforme",
+        "titre": "faire différentes réformes pas forcément utilsés",
         "oui": {
-            "pop": 2645713,
+            "pop": 40000000,
             "legalite": 50,
             "temps": 1
         },
         "non": {
-            "pop": 5000000,
+            "pop": 20000000,
             "legalite": 50,
             "temps": 1
         }
     },
     "event8": {
-        "titre": "condamner des personnes innocentes",
+        "titre": "condamner des personnes pouvant être innocentes",
         "oui": {
-            "pop": 2645713,
+            "pop": 10000000,
             "legalite": 50,
             "temps": 1
         },

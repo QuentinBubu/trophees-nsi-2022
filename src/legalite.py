@@ -1,5 +1,8 @@
 #Legalite qui hérite de Jauge
 
+from src.utils.constante import FIN_LEGALITE
+
+
 class Legalite:
 
     def __init__(self, legalite : float = 100) -> None:
@@ -39,7 +42,7 @@ class Legalite:
         self.legalite = self.legalite + v
         if self.legalite > 100 :             #pour ne pas que la legalite soit au dessus de 100%        
             self.legalite = 100
-        if self.legalite < 0 :               #et pas en dessous de 0%
-            self.legalite = 0
+        if self.legalite <= 0 :               #et pas en dessous de 0%
+            return False, FIN_LEGALITE
         else :
             return self.legalite

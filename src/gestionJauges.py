@@ -20,6 +20,7 @@ class GestionJauges:
         self.legalite = Legalite() #legalite.get_legalite()
         self.temps = Temps()  #temps.get_temps()
         self.justice = Justice()
+        self.popularite.set_pop(45000000)
         
     def jauges(self, choix, event, gestion) -> bool:
         """

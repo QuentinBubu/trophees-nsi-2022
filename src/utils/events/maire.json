@@ -3,12 +3,12 @@
         "titre": "Changer les taxes sur le patrimoines",
         "oui": {
             "pop": 65000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 45000,
-            "legalite": 50,
+            "legalite": 1,
             "temps": 1
         }
     },
@@ -16,25 +16,25 @@
         "titre": "Réduire l'utilisation du papier et développper le numérique",
         "oui": {
             "pop": 50000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 45000,
-            "legalite": 50,
+            "legalite": 1,
             "temps": 1
         }
     },
     "event3": {
-        "titre": "Développer divers salon, bar, commerce de votre ville",
+        "titre": "Développer divers salon, bar, commerce de votre ville\n(Vous serez potentiellement indirectement responsable\ndes activités dans ces centres d'intêret)",
         "oui": {
             "pop": 45000,
-            "legalite": 50,
+            "legalite": -8,
             "temps": 1
         },
         "non": {
             "pop": 35000,
-            "legalite": 50,
+            "legalite": 2,
             "temps": 1
         }
     },
@@ -42,12 +42,12 @@
         "titre": "Accorder plus de droit aux agents municipaux",
         "oui": {
             "pop": 65000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": -5000,
-            "legalite": 50,
+            "legalite": -1,
             "temps": 1
         }
     },
@@ -55,12 +55,12 @@
         "titre": "Lutte contre les dégradations faites",
         "oui": {
             "pop": 54000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": -7000,
-            "legalite": 50,
+            "legalite": -2,
             "temps": 1
         }
     },
@@ -68,25 +68,25 @@
         "titre": "augmenter le RSA",
         "oui": {
             "pop": -5000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 25000,
-            "legalite": 50,
+            "legalite": 1,
             "temps": 1
         }
     },
     "event7": {
-        "titre": "participer à d'autres éléctions",
+        "titre": "participer à une nouvelle éléction",
         "oui": {
-            "pop": 16000,
-            "legalite": 50,
+            "pop": 35000,
+            "legalite": 3,
             "temps": 4
         },
         "non": {
-            "pop": 35000,
-            "legalite": 50,
+            "pop": 16000,
+            "legalite": 1,
             "temps": 1
         }
     }
