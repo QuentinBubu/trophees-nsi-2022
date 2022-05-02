@@ -3,12 +3,12 @@
         "titre": "lancer des nouvelles restictions local\nen rapport à la crise actuelle",
         "oui": {
             "pop": 5000000,
-            "legalite": 50,
+            "legalite": 1,
             "temps": 1
         },
         "non": {
             "pop": 10000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -16,25 +16,25 @@
         "titre": "mener une action coup de point contre\nla surconsomation de plastic",
         "oui": {
             "pop": 5000000,
-            "legalite": 50,
+            "legalite": 5,
             "temps": 1
         },
         "non": {
             "pop": 800000,
-            "legalite": 50,
+            "legalite": 1,
             "temps": 1
         }
     },
     "event3": {
-        "titre": "augmaneter la publicitée pour inciter les habitants à aller aux musées",
+        "titre": "Rajouter de la publicitée pour inciter les habitants à aller aux musées",
         "oui": {
             "pop": 1000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 5000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -42,12 +42,12 @@
         "titre": "mener une action contre le travail dissimulé",
         "oui": {
             "pop": 5000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         },
         "non": {
             "pop": 1000000,
-            "legalite": 50,
+            "legalite": -3,
             "temps": 1
         }
     },
@@ -55,12 +55,12 @@
         "titre": "débloquer des fonds publics pour des actions indéterminés",
         "oui": {
             "pop": -5000000,
-            "legalite": 50,
+            "legalite": -30,
             "temps": 1
         },
         "non": {
             "pop": 1000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -68,25 +68,25 @@
         "titre": "faire une campagne de pub contre l'abandon animalier",
         "oui": {
             "pop": 7000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 4
         },
         "non": {
             "pop": 2000000,
-            "legalite": 50,
+            "legalite": -5,
             "temps": 1
         }
     },
     "event7": {
-        "titre": "aider les jeunes",
+        "titre": "Proposer des aides aux jeunes",
         "oui": {
             "pop": 5000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 4
         },
         "non": {
             "pop": -2000000,
-            "legalite": 50,
+            "legalite": 0,
             "temps": 1
         }
     },
@@ -94,12 +94,12 @@
         "titre": "acheter de la drogue avec un but précis",
         "oui": {
             "pop": 1000000,
-            "legalite": 50,
+            "legalite": -20,
             "temps": 4
         },
         "non": {
             "pop": 3000000,
-            "legalite": 50,
+            "legalite": 3,
             "temps": 1
         }
     },
@@ -107,12 +107,12 @@
         "titre": "créé une association sous couverture afin de récupérer\nl'argent pour soi et de s'assurer un confort",
         "oui": {
             "pop": 1000000,
-            "legalite": 50,
+            "legalite": -5,
             "temps": 4
         },
         "non": {
             "pop": 0,
-            "legalite": 50,
+            "legalite": 2,
             "temps": 1
         }
     }
