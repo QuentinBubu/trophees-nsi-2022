@@ -52,7 +52,7 @@ class Justice:
         NB : si la jauge justice est à 50%, cela ne veut pas dire que vous avez 1 chance / 2 d'être detécté(e), c'est un indiquateur qui plus il est élevé a de chance de vous envoyer en procès et d'aller en prison"""
         just = self.get_jus()
         if just >= 50 :                             #si la jauge de détéction par la justice passe au dessus de 50% :
-            if randint(round(just/100, 0), 10)==5 :           #le joueur à selon son pourcentage une chance plus ou moins forte de se faire détécter.
+            if randint(round(just/100, 0)*10, 10)==10 :           #le joueur à selon son pourcentage une chance plus ou moins forte de se faire détécter.
                 return True                                   #fin du jeu
         if legal < 50 :
             self.add_jus(-5)
